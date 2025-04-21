@@ -16,4 +16,13 @@
 
  @import "tailwindcss";
 
- 
+ @font-face {
+  font-family: 'yatra-one';
+  src: url('./assets/YatraOne-Regular.ttf');
+}
+
+
+@theme{
+  --font-yatra: 'yatra-one';
+
+}
