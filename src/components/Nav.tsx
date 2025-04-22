@@ -30,7 +30,7 @@ const Navbar = () => {
         style={{ backdropFilter: "blur(10px)" }}
         initial={{ width: "100%", borderRadius: 0 }}
         animate={{
-          width: !isMobile?"60%":"80%",
+          width: !isMobile?"70%":"80%",
           borderRadius: "2rem",
           transition: { type: "spring", duration: 2, bounce: 0.5 },
         }}
@@ -51,11 +51,11 @@ const Navbar = () => {
 
             </div>
 
-          <div className="links flex justify-between items-center max-sm:hidden font-text-secondary  gap-8">
+          <div className="links flex justify-between items-center max-[960px]:hidden font-text-secondary  gap-8">
             {navItems.map((item, index) => (
               <NavLink
                 key={index}
-                to={`/${item.replace(/\s+/g, "").toLowerCase()}`}
+                to={item!=="Home"?`/${item.replace(/\s+/g, "").toLowerCase()}`:"/"}
                 className={({ isActive }) =>
                     isActive ? "text-[#FFC221]" : "text-white hover:text-[#FFC221] "
                   }              >
@@ -70,7 +70,7 @@ const Navbar = () => {
             </button>
           </div>
           <div
-            className="hamburger-menu sm:hidden"
+            className="hamburger-menu min-[960px]:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? (
@@ -81,11 +81,11 @@ const Navbar = () => {
           </div>
         </div>
         {menuOpen && (
-          <div className="links flex flex-col justify-center items-center gap-5 max-sm:pt-12 font-text-secondary sm:hidden ">
+          <div className="links flex flex-col justify-center items-center gap-5 max-sm:pt-12 font-text-secondary min-[960px]:hidden ">
             {navItems.map((item, index) => (
               <NavLink
                 key={index}
-                to={`/${item.replace(/\s+/g, "").toLowerCase()}`}
+                to={item!=="Home"?`/${item.replace(/\s+/g, "").toLowerCase()}`:"/"}
                 className={({ isActive }) =>
                     isActive ? "text-[#FFC221]" : "text-white hover:text-[#FFC221] "
                   }                  >

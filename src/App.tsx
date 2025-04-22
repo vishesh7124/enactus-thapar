@@ -1,7 +1,11 @@
+import { Routes, Route } from "react-router"
+
 import BgWrapper from "./components/BgWrapper"
-// import { NavbarDemo } from "./components/Navbar"
 import Navbar from "./components/Nav"
-import Hero from "./components/Hero"
+
+import Landing from "./pages/Landing"
+
+
 
 
 function App() {
@@ -15,13 +19,10 @@ function App() {
 
       </div> */}
         <Navbar/> 
-        <Hero/>
-      <div className=" h-full w-full flex justify-center items-center text-white" >Hello</div>
-      <div className=" h-full w-full flex justify-center items-center text-white" >Hello</div>
-      <div className=" h-full w-full flex justify-center items-center text-white" >Hello</div>
-      <div className=" h-full w-full flex justify-center items-center text-white" >Hello</div>
-      <div className=" h-full w-full flex justify-center items-center text-white" >Hello</div>
-      <div className=" h-full w-full flex justify-center items-center text-white" >Hello</div>
+        <Routes>
+          <Route path="/" element={<Landing/>} />
+        </Routes>
+
     </BgWrapper>
 
     </>
