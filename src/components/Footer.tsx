@@ -5,8 +5,8 @@ import { Copyright } from "lucide-react";
 const Footer = () => {
   return (
     <div className="relative flex w-full bg-black text-white flex-col justify-center items-center gap-16 py-4 ">
-      <div className="head h-2/3 w-full flex justify-around  items-start pt-8 gap-40 max-[960px]:gap-8 max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:px-4 ">
-        <div className="navs flex justify-center items-start gap-16 text-lg ">
+      <div className="head h-2/3 w-full flex justify-around  items-start pt-8 gap-40 max-[960px]:gap-8 max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:px-6 ">
+        <div className="navs flex justify-center items-start gap-16 text-lg max-sm:gap-8 ">
           <div>
             <h1>Resources</h1>
             <div className="flex flex-col text-sm gap-0.5  ">
