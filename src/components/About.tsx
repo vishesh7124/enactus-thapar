@@ -17,6 +17,8 @@ const About = () => {
             height="11"
             viewBox="0 0 255 11"
             fill="none"
+            className="max-sm:w-52"
+
           >
             <motion.path
               initial={{ opacity: 0, pathLength: 0 }}
@@ -32,7 +34,7 @@ const About = () => {
             />
           </svg>
         </div>
-        <p className="mt-6">
+        <p className="mt-6 max-sm:text-sm ">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -43,7 +45,7 @@ const About = () => {
         </p>
         <KnowMore path="/about" className="max-[960px]:self-center" />
       </div>
-      <div className="h-80  ">
+      <div className="h-80 max-sm:h-64 ">
         <img
           src={grpPic}
           className=" h-full w-full object-cover rounded-3xl"

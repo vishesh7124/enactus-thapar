@@ -3,16 +3,16 @@ import About from "@/components/About";
 import { motion } from "motion/react";
 import atrangi from "../assets/atrangi.png";
 import aarohan from "../assets/arohan.png";
-import fil1 from "../assets/fil1.png"
-import fil2 from "../assets/fil2.png"
+import fil1 from "../assets/fil1.png";
+import fil2 from "../assets/fil2.png";
 import bag1 from "../assets/bag1.png";
 import bag2 from "../assets/bag2.png";
 import at1 from "../assets/at1.png";
-import ar1 from "../assets/ar1.png"
+import ar1 from "../assets/ar1.png";
 import { projectsType } from "@/types/projectType";
 import Project from "@/components/Project";
 
-const projects: projectsType =[
+const projects: projectsType = [
   {
     pname: "Atrangi",
     bg: at1,
@@ -23,15 +23,13 @@ const projects: projectsType =[
   },
   {
     pname: "Aarohan",
-    bg:ar1,
+    bg: ar1,
     logo: aarohan,
     prop1: fil2,
     prop2: fil1,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
   },
-]
-
-
+];
 
 const Landing = () => {
   return (
@@ -52,7 +50,6 @@ const Landing = () => {
                 viewBox="0 0 255 11"
                 fill="none"
                 className="max-md:w-40"
-                
               >
                 <motion.path
                   initial={{ opacity: 0, pathLength: 0 }}
@@ -242,15 +239,6 @@ const Landing = () => {
             <Project key={index} project={project} />
           ))}
         </div>
-      </div>
-      <div className=" h-full w-full flex justify-center items-center text-white">
-        Hello
-      </div>
-      <div className=" h-full w-full flex justify-center items-center text-white">
-        Hello
-      </div>
-      <div className=" h-full w-full flex justify-center items-center text-white">
-        Hello
       </div>
       <div className=" h-full w-full flex justify-center items-center text-white">
         Hello

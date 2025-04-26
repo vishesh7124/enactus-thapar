@@ -1,33 +1,27 @@
-import { Routes, Route } from "react-router"
+import { Routes, Route } from "react-router";
 
-import BgWrapper from "./components/BgWrapper"
-import Navbar from "./components/Nav"
+import BgWrapper from "./components/BgWrapper";
+import Navbar from "./components/Nav";
 
-import Landing from "./pages/Landing"
-
-
-
+import Landing from "./pages/Landing";
+import Team from "./pages/Team";
 
 function App() {
-
-
   return (
     <>
       {/* <NavbarDemo/> */}
-    <BgWrapper>
-      {/* <div className="fixed top-5 flex w-full justify-center items-center" >
+      <BgWrapper>
+        {/* <div className="fixed top-5 flex w-full justify-center items-center" >
 
       </div> */}
-        <Navbar/> 
+        <Navbar />
         <Routes>
-          <Route path="/" element={<Landing/>} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
-
-    </BgWrapper>
-
+      </BgWrapper>
     </>
-      
-  )
+  );
 }
 
-export default App
+export default App;
