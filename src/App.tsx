@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router";
 
 import BgWrapper from "./components/BgWrapper";
 import Navbar from "./components/Nav";
+import Footer from "./components/Footer";
 
 import Landing from "./pages/Landing";
 import Projects from "./pages/Projects"
@@ -21,6 +22,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/team" element={<Team />} />
         </Routes>
+        <Footer/>
       </BgWrapper>
     </>
   );
