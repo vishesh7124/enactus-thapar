@@ -4,6 +4,7 @@ import BgWrapper from "./components/BgWrapper";
 import Navbar from "./components/Nav";
 
 import Landing from "./pages/Landing";
+import Projects from "./pages/Projects"
 import Team from "./pages/Team";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/team" element={<Team />} />
         </Routes>
       </BgWrapper>

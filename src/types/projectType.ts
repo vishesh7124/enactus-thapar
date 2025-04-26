@@ -7,4 +7,12 @@ export type ProjectType = {
     desc: string
 }
 
+export type ProjectType2 = {
+    pname: string,
+    desc: string,
+    path:string
+    img1: string,
+    img2: string,
+}
+
 export type projectsType = ProjectType[]
