@@ -33,7 +33,7 @@ html,body{
  /* ---break---
  */  
 
- @custom-variant dark (&:is(.dark *));
+ /* @custom-variant dark (&:is(.dark *)); */
 
  @font-face {
   font-family: 'yatra-one';

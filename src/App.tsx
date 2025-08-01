@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 
 import Landing from "./pages/Landing";
 import Projects from "./pages/Projects"
+import Events from "./pages/Events";
 import Team from "./pages/Team";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/campaigns" element={<Events />} />
           <Route path="/team" element={<Team />} />
         </Routes>
         <Footer/>

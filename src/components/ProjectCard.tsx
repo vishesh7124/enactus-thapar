@@ -12,7 +12,7 @@ const ProjectCard = ({project, className}:Props) => {
   return (
     <div
     style={{ backdropFilter: "blur(10px)" }}
-    className={ cn(`bg-[#30303074] gap-28 max-[1025px]:gap-24  relative max-[960px]:mx-24  max-sm:mx-7 max-sm:mt-12  mx-40 my-20 mt-40 rounded-4xl text-white p-24 max-sm:p-12 flex justify-start items-center max-[1025px]:flex-col-reverse`,className)}
+    className={ cn(`bg-[#30303074] gap-28 max-[1025px]:gap-24  relative max-[960px]:mx-24  max-sm:mx-7 max-sm:mt-12  mx-40 mt-40 rounded-4xl text-white p-24 max-sm:p-12 flex justify-start items-center max-[1025px]:flex-col-reverse`,className)}
   >
     <div className="w-2/3 max-[960px]:w-full flex flex-col justify-center items-start  ">
         <h2 className="text-6xl text-[#FFC221] max-sm:text-5xl font-semibold max-[960px]:text-center "><span className="text-white" >PROJECT</span> {project.pname.toUpperCase()}</h2>

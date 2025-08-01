@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils";
 
 const Team = () => {
   return (
-    <>
+    <div className="relative z-0 w-full flex flex-col justify-center items-center gap-16 text-white pt-20">
       <div
         style={{ backdropFilter: "blur(10px)" }}
-        className=" bg-[#30303074] gap-16  relative max-[960px]:mx-24  max-sm:mx-7  max-sm:mt-40 mx-40 my-20 mt-50  rounded-4xl text-white p-8 flex justify-center max-sm:gap-8 items-center max-[960px]:flex-col"
+        className=" bg-[#30303074] gap-16  relative max-[960px]:mx-24  max-sm:mx-7  max-sm:mt-40 mx-40 my-20 rounded-4xl text-white p-8 flex justify-center max-sm:gap-8 items-center max-[960px]:flex-col"
       >
         <div className="w-1/2 max-[960px]:w-full flex flex-col justify-center items-start  ">
           <div>
@@ -161,7 +161,7 @@ const Team = () => {
         <div className="flex flex-wrap px-36 max-sm:px-20 justify-center items-center gap-11 my-4 w-full">
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

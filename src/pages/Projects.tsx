@@ -44,14 +44,17 @@ const Projects = () => {
     ]
 
   return (
-    <>
-        <h1 className=" relative w-full my-50 text-center text-white text-8xl max-sm:text-5xl max-sm:mb-30 font-bold  " >
+    <div className="relative z-0 w-full flex flex-col justify-center items-center gap-16 text-white pt-55">
+        <h1 className=" relative w-full text-center text-white text-8xl max-sm:text-5xl max-sm:mb-30 font-bold  " >
             P R O J E C T S
         </h1>
-        {projects.map((project,index)=>(
-            <ProjectCard className={index%2!==0 ?"flex-row-reverse":""}  key={index} project={project} />
-        ))}
-    </>
+        <div className="w-full mb-16 ">
+            {projects.map((project,index)=>(
+                <ProjectCard className={index%2!==0 ?"flex-row-reverse":""}  key={index} project={project} />
+            ))}
+
+        </div>
+    </div>
     // <div
     //   style={{ backdropFilter: "blur(10px)" }}
     //   className=" bg-[#30303074] gap-4 max-[1025px]:gap-24  relative max-[960px]:mx-24  max-sm:mx-7 max-sm:mt-40  mx-40 my-20 mt-50 rounded-4xl text-white p-24 max-sm:p-12 flex justify-between items-center max-[1025px]:flex-col-reverse"

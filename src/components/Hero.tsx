@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <div className=" relative h-full w-full flex justify-center gap-4 items-center text-white max-[960px]:flex-col max-[960px]:gap-32 max-[500px]:gap-24 max-sm:pt-20 max-[380px]:gap-16 ">
+    <div className=" relative h-full w-full flex justify-center gap-4 items-center text-white max-[960px]:flex-col max-[960px]:gap-32 max-[500px]:gap-24 max-sm:pt-20 max-[380px]:gap-16  ">
       <motion.div
         animate={{ y: [-30, 0, -30] }}
         transition={{
