@@ -11,6 +11,7 @@ import at1 from "../assets/at1.png";
 import ar1 from "../assets/ar1.png";
 import { projectsType } from "@/types/projectType";
 import Project from "@/components/Project";
+import { EventC } from "@/components/EventC";
 
 const projects: projectsType = [
   {
@@ -92,6 +93,9 @@ const Landing = () => {
           {projects.map((project, index) => (
             <Project key={index} project={project} />
           ))}
+        </div>
+        <div className="flex w-full justify-center items-center gap-16 max-sm:flex-col mb-8 ">
+          <EventC />
         </div>
       </div>
       {/* <div className=" h-full w-full flex justify-center items-center text-white">

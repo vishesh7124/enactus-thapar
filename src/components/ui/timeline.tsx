@@ -26,7 +26,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 20%", "end 80%"],
+    offset: ["start 30%", "end 80%"],
   });
 
   //   const { scrollYProgress } = useScroll({
@@ -49,7 +49,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div
       ref={containerRef}
-      className="w-full relative bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="w-full relative bg-transparent font-sans md:px-10"
     >
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
           {data.map((item, index) => (
@@ -75,6 +75,21 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             </div>
           ))}
           <div
+  style={{
+    height: height + "px",
+  }}
+  className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent via-yellow-400 dark:via-yellow-500 to-transparent [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+>
+  <motion.div 
+    style={{
+      height: heightTransform,
+      opacity: opacityTransform,
+    }}
+    className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-yellow-400 via-yellow-300 to-white from-[0%] via-[40%] rounded-full"
+  />
+</div>
+
+          {/* <div
             style={{
               height: height + "px",
             }}
@@ -87,7 +102,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               }}
               className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
             />
-          </div>
+          </div> */}
         {/* <div  className="relative">
 
         </div> */}
