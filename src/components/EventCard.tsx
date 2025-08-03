@@ -3,10 +3,16 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import sustainathon from "../assets/sustainathon.png"
-import calender from "../assets/calender.png"
+import sustainathon from "../assets/sustainathon.png";
+import calender from "../assets/calender.png";
+import PinnedPaper from "./PinnedPaper";
+import { Badge } from "@/components/ui/badge";
+import { LucideFileChartColumnIncreasing } from "lucide-react";
+import { IconRun } from "@tabler/icons-react";
+import { RoundTimeline } from "./RoundTimeline";
+import { object } from "framer-motion/client";
 
-export function EventCard() {
+export function EventCard({ card }) {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   );
@@ -46,7 +52,7 @@ export function EventCard() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0  grid place-items-center  z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -62,7 +68,7 @@ export function EventCard() {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6 "
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -70,7 +76,7 @@ export function EventCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className=" w-full md:w-10/12   h-full md:h-fit md:max-h-[90%] md:mt-12  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-x-hidden overflow-y-scroll"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -78,38 +84,20 @@ export function EventCard() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-80  sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top m-12"
                 />
               </motion.div>
 
               <div>
                 <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
-                    >
-                      {active.title}
-                    </motion.h3>
+                  <div className="bg-[#f3f4bbd2] p-4 font-satoshi font-semibold rounded-lg">
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 text-base"
+                      className="text-[#3E3C33] text-base"
                     >
                       {active.description}
                     </motion.p>
                   </div>
-
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -119,9 +107,38 @@ export function EventCard() {
                     exit={{ opacity: 0 }}
                     className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
-                    {typeof active.content === "function"
+                    {/* {typeof active.content === "function"
                       ? active.content()
-                      : active.content}
+                      : active.content} */}
+                    <p
+                      className={`text-3xl text-[${card.colors.secondary}] font-seriguel font-bold p-4 `}
+                    >
+                      ROUNDS
+                    </p>
+                    <RoundTimeline colors={card.colors} data={card.rounds} />
+
+                    <div className="w-full gap-2 flex flex-col justify-center items-start py-8" >
+
+                                        <p
+                      className={`text-3xl text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold p-4 `}
+                    >
+                      Glance at Numbers </p>
+                    <div className="flex justify-center gap-6 items-center flex-wrap ">
+                        {(Object.entries(card.numbers) as [string, number][] ).map(([label,value],index)=>(
+                        <PinnedPaper key={index} className={`bg-[${index%2===0?card.colors.primary:card.colors.secondary}] `} rotation={index%2===0?"rotate-2":"-rotate-2"}>
+                            <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
+                            <h2 className="text-5xl font-seriguel  ">{value}+</h2>
+                            <h3 className="text-xl  font-poppins  ">
+                                {label}
+                            </h3>
+                            </div>
+                        </PinnedPaper>
+
+                        ))}
+ 
+                    </div>
+                    </div>
+                    <div></div>
                   </motion.div>
                 </div>
               </div>
@@ -129,40 +146,73 @@ export function EventCard() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
-        {cards.map((card, index) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={card.title}
-            onClick={() => setActive(card)}
-            className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800  rounded-xl cursor-pointer"
-          >
-            <div className="flex gap-4 flex-col  w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
-                    <div className='flex justify-center items-center text-[#F3F4BB]'>
-                        <img src={calender} className="object-contain h-24 w-24" alt="" />
-                        <p className='text-5xl font-semibold uppercase' >Day 1</p>
-
-                    </div>
-              </motion.div>
-              <div className="flex justify-center items-center flex-col">
-                <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-[#F3F4BB] text-center md:text-left text-base"
-                >
-                  {card.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left text-base"
-                >
-                  {card.description}
-                </motion.p>
+      <div className="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-1 items-start gap-4">
+        <motion.div
+          layoutId={`card-${card.title}-${id}`}
+          key={card.title}
+          onClick={() => setActive(card)}
+          className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 bg-[#30303074]  rounded-xl cursor-pointer"
+        >
+          <div className="flex gap-12 flex-col  w-full">
+            <motion.div layoutId={`image-${card.title}-${id}`}>
+              <div className="flex justify-center items-center text-[#F3F4BB]">
+                <img src={card.src} className="object-contain w-xl " alt="" />
               </div>
+            </motion.div>
+            <div className="flex justify-center items-center flex-col  p-4 font-satoshi font-semibold rounded-lg">
+              <div className="flex justify-end items-center w-full  gap-6 mb-5 flex-wrap max-sm:justify-center  ">
+                <Badge
+                  variant="default"
+                  className=" bg-[#96bf59] text-lg text-white rounded-2xl "
+                >
+                  <LucideFileChartColumnIncreasing className="h-4 w-4" />
+                  Case Study Competition
+                </Badge>
+                <Badge
+                  variant="default"
+                  className=" bg-[#F3F4BB] text-lg text-black rounded-2xl "
+                >
+                  <IconRun className="h-4 w-4" />3 Rounds
+                </Badge>
+              </div>
+              <motion.p
+                layoutId={`description-${card.description}-${id}`}
+                className="text-white text-center md:text-left text-base"
+              >
+                {card.description}
+              </motion.p>
             </div>
-          </motion.div>
-        ))}
-      </ul>
+            {/* <div className="flex justify-center gap-6 items-center flex-wrap " > */}
+
+            {/* <PinnedPaper className="bg-[#F3F4BB]">
+                <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
+                  <h2 className="text-5xl font-seriguel  ">250+</h2>
+                  <h3 className="text-xl  font-poppins  ">
+                    Students Participated
+                  </h3>
+                </div>
+              </PinnedPaper>
+              <PinnedPaper className="bg-[#8CBF40]  " rotation="-rotate-2" >
+                <div className="whitespace-pre-line flex flex-col gap-2 text-white ">
+                  <h2 className="text-5xl font-seriguel  ">250+</h2>
+                  <h3 className="text-xl  font-poppins  ">
+                    Students Participated
+                  </h3>
+                </div>
+              </PinnedPaper> */}
+            {/* <PinnedPaper className="bg-[#F3F4BB]">
+                <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
+                  <h2 className="text-5xl font-seriguel  ">250+</h2>
+                  <h3 className="text-xl  font-poppins  ">
+                    Students Participated
+                  </h3>
+                </div>
+              </PinnedPaper> */}
+
+            {/* </div> */}
+          </div>
+        </motion.div>
+      </div>
     </>
   );
 }
@@ -199,24 +249,3 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
-const cards = [
-  {
-    description: "Sustain-a-thon was an overnight case study event at AARAMBH 2024, where students crafted sustainable solutions to real-world challenges.",
-    title: "Sustainathon",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Sustain-a-thon, a highlight of AARAMBH 2024, was an overnight case
-          study competition that challenged students to develop creative,
-          sustainable solutions to real-world problems. It fostered
-          cross-disciplinary collaboration and a problem-solving mindset aimed
-          at driving meaningful impact.
-        </p>
-      );
-    },
-  },
-];

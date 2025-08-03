@@ -45,6 +45,36 @@ html,body{
 
 
 }
+ @font-face {
+  font-family: 'satoshi';
+  src: url('./assets/Satoshi-Variable.ttf');
+}
+
+@theme{
+  --font-satoshi: 'satoshi';
+
+
+}
+ @font-face {
+  font-family: 'seriguel';
+  src: url('./assets/MEISHASANSSERIF.ttf');
+}
+
+@theme{
+  --font-seriguel: 'seriguel';
+
+
+}
+ @font-face {
+  font-family: 'poppins';
+  src: url('./assets/Poppins-Regular.ttf');
+}
+
+@theme{
+  --font-poppins: 'poppins';
+
+
+}
 
 @theme inline{
   --animate-marquee: marquee var(--duration) infinite linear;
