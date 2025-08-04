@@ -1,16 +1,17 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, color, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import sustainathon from "../assets/sustainathon.png";
-import calender from "../assets/calender.png";
 import PinnedPaper from "./PinnedPaper";
 import { Badge } from "@/components/ui/badge";
 import { LucideFileChartColumnIncreasing } from "lucide-react";
 import { IconRun } from "@tabler/icons-react";
 import { RoundTimeline } from "./RoundTimeline";
-import { object } from "framer-motion/client";
+import { Marquee } from "./magicui/marquee";
+import { PixelImage } from "./magicui/pixel-image";
+import { cn } from "@/lib/utils";
+import { OrbitingCircles } from "./magicui/orbiting-circles";
 
 export function EventCard({ card }) {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -86,6 +87,22 @@ export function EventCard({ card }) {
                   alt={active.title}
                   className="w-80  sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top m-12"
                 />
+                <Marquee pauseOnHover className="[--duration:20s] ">
+                  {card.gallery.map((item, index) => (
+                    <figure
+                      key={index}
+                      className={cn(
+                        "relative h-fit w-fit cursor-pointer overflow-hidden rounded-sm    "
+                      )}
+                    >
+                      <PixelImage
+                        src={item}
+                        customGrid={{ rows: 4, cols: 6 }}
+                        grayscaleAnimation
+                      />
+                    </figure>
+                  ))}
+                </Marquee>
               </motion.div>
 
               <div>
@@ -111,32 +128,84 @@ export function EventCard({ card }) {
                       ? active.content()
                       : active.content} */}
                     <p
+                      style={{ color: card.colors.secondary }}
                       className={`text-3xl text-[${card.colors.secondary}] font-seriguel font-bold p-4 `}
                     >
                       ROUNDS
                     </p>
                     <RoundTimeline colors={card.colors} data={card.rounds} />
 
-                    <div className="w-full gap-2 flex flex-col justify-center items-start py-8" >
-
-                                        <p
-                      className={`text-3xl text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold p-4 `}
-                    >
-                      Glance at Numbers </p>
-                    <div className="flex justify-center gap-6 items-center flex-wrap ">
-                        {(Object.entries(card.numbers) as [string, number][] ).map(([label,value],index)=>(
-                        <PinnedPaper key={index} className={`bg-[${index%2===0?card.colors.primary:card.colors.secondary}] `} rotation={index%2===0?"rotate-2":"-rotate-2"}>
-                            <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
-                            <h2 className="text-5xl font-seriguel  ">{value}+</h2>
-                            <h3 className="text-xl  font-poppins  ">
-                                {label}
-                            </h3>
-                            </div>
-                        </PinnedPaper>
-
-                        ))}
- 
+                    <div className="w-full flex justify-center items-center gap-12 my-10">
+                      <div className="relative overflow-hidden h-[40rem] w-[50%]">
+                        <OrbitingCircles radius={125}>
+                          <img
+                            src={card.sdg[0]}
+                            className="h-36 w-36 object-contain"
+                            alt=""
+                          />
+                        </OrbitingCircles>
+                        <OrbitingCircles radius={250} reverse>
+                          {card.sdg.slice(1).map((item, index) => (
+                            <img
+                              src={item}
+                              key={index}
+                              className="h-36 w-36 object-contain"
+                              alt=""
+                            />
+                          ))}
+                          {/* <img src={sdg4} className="h-36 w-36 object-contain" alt="" /> */}
+                        </OrbitingCircles>
+                      </div>
+                      <div className="flex flex-col justify-center items-center gap-0">
+                        <p
+                          style={{ color: card.colors.secondary }}
+                          className={`text-6xl text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold `}
+                        >
+                          IMPACT{" "}
+                        </p>
+                        <p
+                          style={{ color: card.colors.primary }}
+                          className={`text-6xl text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold  `}
+                        >
+                          CREATED{" "}
+                        </p>
+                      </div>
                     </div>
+
+                    <div className="w-full gap-2 flex flex-col justify-center items-start py-8">
+                      <p
+                        style={{ color: card.colors.secondary }}
+                        className={`text-3xl text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold p-4 `}
+                      >
+                        GLANCE AT NUMBERS{" "}
+                      </p>
+
+                      <div className="flex justify-center gap-6 items-center flex-wrap ">
+                        {(
+                          Object.entries(card.numbers) as [string, number][]
+                        ).map(([label, value], index) => (
+                          <PinnedPaper
+                            key={index}
+                            className={`bg-[${
+                              index % 2 === 0
+                                ? card.colors.primary
+                                : card.colors.secondary
+                            }] `}
+                            rotation={
+                              index % 2 === 0 ? "rotate-2" : "-rotate-2"
+                            }
+                          >
+                            <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
+                              <h2 className="text-5xl font-seriguel  ">
+                                {value}+
+                              </h2>
+                              <h3 className="text-xl  font-poppins  ">
+                                {label}
+                              </h3>
+                            </div>
+                          </PinnedPaper>
+                        ))}
+                      </div>
                     </div>
                     <div></div>
                   </motion.div>
@@ -182,34 +251,6 @@ export function EventCard({ card }) {
                 {card.description}
               </motion.p>
             </div>
-            {/* <div className="flex justify-center gap-6 items-center flex-wrap " > */}
-
-            {/* <PinnedPaper className="bg-[#F3F4BB]">
-                <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
-                  <h2 className="text-5xl font-seriguel  ">250+</h2>
-                  <h3 className="text-xl  font-poppins  ">
-                    Students Participated
-                  </h3>
-                </div>
-              </PinnedPaper>
-              <PinnedPaper className="bg-[#8CBF40]  " rotation="-rotate-2" >
-                <div className="whitespace-pre-line flex flex-col gap-2 text-white ">
-                  <h2 className="text-5xl font-seriguel  ">250+</h2>
-                  <h3 className="text-xl  font-poppins  ">
-                    Students Participated
-                  </h3>
-                </div>
-              </PinnedPaper> */}
-            {/* <PinnedPaper className="bg-[#F3F4BB]">
-                <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
-                  <h2 className="text-5xl font-seriguel  ">250+</h2>
-                  <h3 className="text-xl  font-poppins  ">
-                    Students Participated
-                  </h3>
-                </div>
-              </PinnedPaper> */}
-
-            {/* </div> */}
           </div>
         </motion.div>
       </div>

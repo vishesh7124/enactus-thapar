@@ -1,5 +1,15 @@
 import { Timeline } from "@/components/ui/timeline";
 import sustainathon from "@/assets/sustainathon.png";
+import i1 from "@/assets/i1.png";
+import i2 from "@/assets/i2.png"
+import i3 from "@/assets/i3.png"
+import i4 from "@/assets/i4.png"
+import i5 from "@/assets/i5.png"
+
+import sdg4 from "@/assets/E_GIF_04.gif"
+import sdg13 from "@/assets/E_GIF_13.gif"
+import sdg17 from "@/assets/E_GIF_17.gif"
+
 
 const card = {
   description: `Sustain-a-thon, part of AARAMBH 2024, was an overnight case study competition designed to tackle pressing challenges through creative solutions. It brought together students from diverse backgrounds to ideate and implement sustainable solutions, encouraging a problem-solving mindset focused on real-world issues.`,
@@ -21,6 +31,8 @@ const card = {
     primary: "#f3f4bbd2",
     secondary: "#8CBF40",
   },
+  gallery:[i1,i2,i3,i4,i5],
+  sdg:[sdg4,sdg13,sdg17]
 };
 
 const data = [
@@ -45,6 +57,8 @@ const data = [
         primary: "#f3f4bbd2",
         secondary: "#8CBF40",
       },
+        gallery:[i1,i2,i3,i4,i5],
+          sdg:[sdg4,sdg13,sdg17]
     },
   },
 
@@ -54,7 +68,6 @@ const data = [
     card: card,
   },
 ];
-
 const Events = () => {
   return (
     <>
