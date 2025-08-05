@@ -78,7 +78,7 @@ export const RoundTimeline = ({ data, colors }: { data: string[], colors:{primar
             transition={{ duration: 0.6, delay: 1.2 + index * 0.2 }}
           >
             {/* Card Header */}
-            <h3 className="text-xl font-bold text-[#3E3C33] font-seriguel m-2">
+            <h3 className="text-xl max-sm:text-base font-bold text-[#3E3C33] font-seriguel m-2 max-sm:m-1">
               {`ROUND ${index+1}`}
             </h3>
 

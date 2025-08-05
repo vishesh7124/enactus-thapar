@@ -12,6 +12,8 @@ import { Marquee } from "./magicui/marquee";
 import { PixelImage } from "./magicui/pixel-image";
 import { cn } from "@/lib/utils";
 import { OrbitingCircles } from "./magicui/orbiting-circles";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
 
 export function EventCard({ card }) {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -38,6 +40,9 @@ export function EventCard({ card }) {
   }, [active]);
 
   useOutsideClick(ref, () => setActive(null));
+
+    const isMobile = useMediaQuery("(max-width: 640px)");
+
 
   return (
     <>
@@ -69,7 +74,7 @@ export function EventCard({ card }) {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6 "
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6 z-[100] "
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -85,7 +90,7 @@ export function EventCard({ card }) {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-80  sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top m-12"
+                  className="w-80 max-[380px]:w-64  sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top m-12"
                 />
                 <Marquee pauseOnHover className="[--duration:20s] ">
                   {card.gallery.map((item, index) => (
@@ -110,19 +115,19 @@ export function EventCard({ card }) {
                   <div className="bg-[#f3f4bbd2] p-4 font-satoshi font-semibold rounded-lg">
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-[#3E3C33] text-base"
+                      className="text-[#3E3C33] text-base max-sm:text-sm"
                     >
                       {active.description}
                     </motion.p>
                   </div>
                 </div>
-                <div className="pt-4 relative px-4">
+                <div className="pt-4 relative px-4 ">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base  h-fit pb-10 flex flex-col items-start gap-4 overflow-x-hidden dark:text-neutral-400 [mask:linear-gradient(to_bottom,white_0%,white_80%,transparent_100%)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {/* {typeof active.content === "function"
                       ? active.content()
@@ -135,21 +140,21 @@ export function EventCard({ card }) {
                     </p>
                     <RoundTimeline colors={card.colors} data={card.rounds} />
 
-                    <div className="w-full flex justify-center items-center gap-12 my-10">
-                      <div className="relative overflow-hidden h-[40rem] w-[50%]">
-                        <OrbitingCircles radius={125}>
+                    <div className="w-full flex  justify-center items-center gap-12 max-sm:gap-8 my-10 max-[850px]:flex-col-reverse ">
+                      <div className="relative overflow-visible h-[40rem] max-sm:h-[26rem] w-[65%] max-[850px]:w-full">
+                        <OrbitingCircles radius={!isMobile?125:75}>
                           <img
                             src={card.sdg[0]}
-                            className="h-36 w-36 object-contain"
+                            className="h-36 w-36 max-[380px]:h-16 max-[380px]:w-16 max-sm:h-24 max-sm:w-24 object-contain"
                             alt=""
                           />
                         </OrbitingCircles>
-                        <OrbitingCircles radius={250} reverse>
+                        <OrbitingCircles radius={!isMobile?250:150} reverse>
                           {card.sdg.slice(1).map((item, index) => (
                             <img
                               src={item}
                               key={index}
-                              className="h-36 w-36 object-contain"
+                              className="h-36 w-36 max-sm:h-24 max-sm:w-24 max-[380px]:h-16 max-[380px]:w-16 object-contain"
                               alt=""
                             />
                           ))}
@@ -159,7 +164,7 @@ export function EventCard({ card }) {
                       <div className="flex flex-col justify-center items-center gap-0">
                         <p
                           style={{ color: card.colors.secondary }}
-                          className={`text-6xl text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold `}
+                          className={`text-6xl  text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold `}
                         >
                           IMPACT{" "}
                         </p>
@@ -172,15 +177,19 @@ export function EventCard({ card }) {
                       </div>
                     </div>
 
-                    <div className="w-full gap-2 flex flex-col justify-center items-start py-8">
-                      <p
-                        style={{ color: card.colors.secondary }}
-                        className={`text-3xl text-[${card.colors.secondary}] font-seriguel text-uppercase font-bold p-4 `}
-                      >
-                        GLANCE AT NUMBERS{" "}
-                      </p>
+                    <div className="w-full gap-2 flex flex-col justify-center items-start py-4 max-sm:py-2">
+                        <div className="flex max-sm:flex-col justify-center items-center gap-4 max-sm:gap-0 p-4 pt-0 max-sm:pt-0">
+                            <p
+                                style={{ color: card.colors.primary }}
+                                className={`text-4xl text-[${card.colors.primary}] font-seriguel text-uppercase font-bold  `}
+                            >
+                                GLANCE AT 
+                            </p>
+                            <span className="text-4xl font-seriguel text-uppercase font-bold max-sm:pt-0 " style={{color:card.colors.secondary}}>NUMBERS</span>{" "}
 
-                      <div className="flex justify-center gap-6 items-center flex-wrap ">
+                        </div>
+
+                      <div className="flex justify-center gap-6 max-sm:gap-2 items-center flex-wrap ">
                         {(
                           Object.entries(card.numbers) as [string, number][]
                         ).map(([label, value], index) => (
@@ -190,16 +199,16 @@ export function EventCard({ card }) {
                               index % 2 === 0
                                 ? card.colors.primary
                                 : card.colors.secondary
-                            }] `}
+                            }] max-sm:m-4 max-sm:p-3 max-sm:w-[38%] max-sm:max-w-fit  `}
                             rotation={
                               index % 2 === 0 ? "rotate-2" : "-rotate-2"
                             }
                           >
                             <div className="whitespace-pre-line flex flex-col gap-2 text-[#3E3C33] ">
-                              <h2 className="text-5xl font-seriguel  ">
+                              <h2 className="text-5xl max-sm:text-3xl font-seriguel  ">
                                 {value}+
                               </h2>
-                              <h3 className="text-xl  font-poppins  ">
+                              <h3 className="text-xl max-sm:text-sm font-poppins  ">
                                 {label}
                               </h3>
                             </div>
@@ -230,23 +239,25 @@ export function EventCard({ card }) {
             </motion.div>
             <div className="flex justify-center items-center flex-col  p-4 font-satoshi font-semibold rounded-lg">
               <div className="flex justify-end items-center w-full  gap-6 mb-5 flex-wrap max-sm:justify-center  ">
-                <Badge
+                {card.eventTypeBadge}
+                {/* <Badge
                   variant="default"
-                  className=" bg-[#96bf59] text-lg text-white rounded-2xl "
+                  className=" bg-[#96bf59] text-lg max-sm:text-base text-white rounded-2xl "
                 >
                   <LucideFileChartColumnIncreasing className="h-4 w-4" />
                   Case Study Competition
-                </Badge>
-                <Badge
+                </Badge> */}
+                {card.InfoBadge}
+                {/* <Badge
                   variant="default"
-                  className=" bg-[#F3F4BB] text-lg text-black rounded-2xl "
+                  className=" bg-[#F3F4BB] text-lg max-sm:text-base text-black rounded-2xl "
                 >
                   <IconRun className="h-4 w-4" />3 Rounds
-                </Badge>
+                </Badge> */}
               </div>
               <motion.p
                 layoutId={`description-${card.description}-${id}`}
-                className="text-white text-center md:text-left text-base"
+                className="text-white text-center md:text-left text-base max-sm:text-sm"
               >
                 {card.description}
               </motion.p>
