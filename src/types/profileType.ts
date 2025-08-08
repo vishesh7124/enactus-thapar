@@ -4,5 +4,5 @@ export type ProfileType = {
     img: string,
     bgLayer: string
     linkedin: string,
-    instagram: string,
+    instagram?: string,
 }

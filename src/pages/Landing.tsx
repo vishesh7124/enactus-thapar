@@ -94,9 +94,9 @@ const Landing = () => {
             <Project key={index} project={project} />
           ))}
         </div>
-        <div className="flex w-full justify-center items-center gap-16 max-sm:flex-col mb-8 ">
+        {/* <div className="flex w-full justify-center items-center gap-16 max-sm:flex-col mb-8 ">
           <EventC />
-        </div>
+        </div> */}
       </div>
       {/* <div className=" h-full w-full flex justify-center items-center text-white">
         Hello

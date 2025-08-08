@@ -1,5 +1,10 @@
+"use client"
+
 import React, { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
+import { AuroraBackground } from "./aurora-background";
+
 
 interface HoverExpandProps {
   images: string[]
@@ -42,12 +47,15 @@ export default function HoverExpand({
 
   return (
     <div className="relative">
-      <div className="mx-auto flex w-fit  gap-1 rounded-md pb-20 pt-10 md:gap-8">
+      <div className="mx-auto flex w-fit  gap-1 rounded-md pb-20 pt-10 md:gap-2">
         {images.slice(0, maxThumbnails).map((imageUrl, i) => (
+
+
+
           <div
             key={`image-container-${i}`}
-            className={`group relative bg-[#17344E] h-[34rem] overflow-hidden rounded-4xl transition-all duration-300 ${
-              selectedIndex === i ? "w-fit" : "w-4 sm:w-5 md:w-8 xl:w-24"
+            className={`group relative h-96 bg-[#30303074] overflow-hidden rounded-2xl transition-all duration-300 ${
+              selectedIndex === i ? "w-xl" : "w-4 sm:w-5 md:w-8 xl:w-12"
             }`}
             onMouseEnter={() => setSelectedIndex(i)}
             onMouseLeave={() => setSelectedIndex(i)}
@@ -56,41 +64,27 @@ export default function HoverExpand({
               setIsModalOpen(true)
             }}
           >
-            <motion.div
-              layoutId={`image-${i}`}
-              className="absolute inset-0 size-full"
-            >
-              <motion.div className={` ${selectedIndex===i ?"":"bg-black/50"} h-full w-full absolute top-0 left-0`} 
-                        animate={{
-          opacity: selectedIndex !==i ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.5,
-          ease: "easeInOut",
-        }}
-              >
-                <motion.p className="absolute bottom-24 left-0 z-10 text-white text-2xl font-bold   rounded -rotate-90"
+                                    {/* <AuroraBackground> */}
 
-                          animate={{
-                            display: selectedIndex !== i ? "block" : "none",
-          opacity: selectedIndex !==i ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.5,
-          ease: "easeInOut",
-        }}
-                >
-                  AARAMBH
-                </motion.p>
+                  <motion.div
+                    layoutId={`image-${i}`}
+                    className="absolute inset-0 size-full flex flex-col justify-center items-center   "
+                  >
+                    {/* <AnimatedGridPattern /> */}
+                      
+                      <img
+                        src={imageUrl}
+                        alt={`Image ${i + 1}`}
+                        className="size-full  w-72 object-contain  transition-transform duration-300 "
+                      />
 
-              </motion.div>
-              <img
-                src={imageUrl}
-                alt={`Image ${i + 1}`}
-                className={`size-full ${selectedIndex===i?"object-contain":"object-cover"}   transition-transform duration-300 `}
-              />
-            </motion.div>
+                  </motion.div>
+
+                                    {/* </AuroraBackground> */}
           </div>
+
+
+          
         ))}
       </div>
 

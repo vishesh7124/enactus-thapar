@@ -1,5 +1,5 @@
 
-import HoverExpand from "./ui/hover-expand"
+import HoverExpand from "@/components/ui/hover-expand"
 import logo from '../assets/Aarambh_logo.png'
 // import logo from "../assets/image1.png"
 
@@ -17,17 +17,12 @@ const images = [
 
 export function EventC() {
   return (
-    <section className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
-      <div className="relative mx-auto flex w-full flex-col items-center justify-center  rounded-[24px] border border-black/5 bg-neutral-800/5  shadow-sm  md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] ">
-
-        <HoverExpand
+    <HoverExpand
           images={images}
           initialSelectedIndex={0}
-          thumbnailHeight={1000}
-          modalImageSize={1000}
+          thumbnailHeight={200}
+          modalImageSize={400}
           maxThumbnails={11}
-        />
-      </div>
-    </section>
+    />
   )
 }

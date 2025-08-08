@@ -8,11 +8,11 @@ import { motion } from "motion/react";
 const Navbar = () => {
   const navItems: string[] = [
     "Home",
-    "About Us",
+    // "About Us",
     "Projects",
     "Team",
-    "Campaigns",
-    "Blog",
+    "Events",
+    // "Blog",
   ];
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const location = useLocation();

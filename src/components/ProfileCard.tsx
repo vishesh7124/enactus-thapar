@@ -61,7 +61,7 @@ const ProfileCard = ({member}:Props) => {
         <p className="text-xs">{member.position}</p>
       </div>
       <motion.div className="social flex gap-1 items-center justify-end mb-0.5  "  animate={!cardAnimation ?{y:-50, opacity:0}:{y:0, opacity:1, transition:{type:"spring",delay:0.1, duration:1}}} >
-        <Link to={`/${member.linkedin}`} >
+        <Link to={`${member.linkedin}`} >
             <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1.5rem"
@@ -79,6 +79,8 @@ const ProfileCard = ({member}:Props) => {
             </svg>
         
         </Link>
+        {member.instagram &&
+        
         <Link to={`/${member.instagram}`}>
             <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -110,6 +112,7 @@ const ProfileCard = ({member}:Props) => {
             </svg>
         
         </Link>
+        }
       </motion.div>
     </div>
   </div>

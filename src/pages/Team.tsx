@@ -1,6 +1,6 @@
 import grpPic from "../assets/grp.webp";
 import { motion } from "motion/react";
-import { Eb, Core } from "@/data/TeamData";
+import { Faculty,Eb, Core } from "@/data/TeamData";
 import ProfileCard from "@/components/ProfileCard";
 import { Marquee } from "@/components/magicui/marquee";
 import { cn } from "@/lib/utils";
@@ -59,6 +59,41 @@ const Team = () => {
         </div>
       </div>
 
+      <div className="relative z-0 w-full flex flex-col justify-center items-center gap-12 text-white">
+        <div className="head">
+          <div className="">
+            <h2 className="text-6xl text-[#FFC221] max-sm:text-[2.75rem] text-center  font-semibold ">
+              Faculty Mentors
+            </h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="440"
+              height="12"
+              viewBox="0 0 469 12"
+              fill="none"
+              className="max-sm:w-[20.5rem]"
+            >
+              <motion.path
+                d="M3.00371 8.56722C270.82 11.1827 584.955 2.21515 417.359 2.21515C88.0468 2.21514 -99.7438 -1.52121 59.4293 4.83081C210.847 10.8733 394.619 10.2127 467.89 9.68815"
+                stroke="#FFF9E8"
+                stroke-width="2"
+                stroke-linecap="round"
+                initial={{ opacity: 0, pathLength: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  pathLength: 1,
+                  transition: { duration: 1, delay: 0.5 },
+                }}
+              />
+            </svg>
+          </div>
+        </div>
+        <div className="flex flex-wrap px-36 max-sm:px-20 justify-center items-center gap-11 my-4 w-full">
+          {Faculty.map((member, index) => (
+            <ProfileCard key={index} member={member} />
+          ))}
+        </div>
+      </div>
       <div className="relative z-0 w-full flex flex-col justify-center items-center gap-12 text-white">
         <div className="head">
           <div className="">
