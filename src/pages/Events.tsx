@@ -14,46 +14,7 @@ import { IconRun } from "@tabler/icons-react";
 import { LucideFileChartColumnIncreasing } from "lucide-react";
 import aarambh1 from "@/assets/Aarambh_logo.png"
 
-const card = {
-  description: `Sustain-a-thon, part of AARAMBH 2024, was an overnight case study competition designed to tackle pressing challenges through creative solutions. It brought together students from diverse backgrounds to ideate and implement sustainable solutions, encouraging a problem-solving mindset focused on real-world issues.`,
-  src: sustainathon,
-  rounds: [
-    "Biz Blitz- The business quiz",
-    "Overnight hackathon",
-    "Final Pitching Round",
-    "Final Pitching Round",
-  ],
-  numbers: {
-    "Students Participated": 250,
-    "Hours of Brainstorming": 10,
-    "Colleges Participate": 15,
-    "Case Studies Solved": 5,
-    "Participating Teams": 50,
-  },
-  colors: {
-    primary: "#f3f4bbd2",
-    secondary: "#8CBF40",
-  },
-  gallery: [i1, i2, i3, i4, i5],
-  sdg: [sdg4, sdg13, sdg17],
-  eventTypeBadge: (
-    <Badge
-      variant="default"
-      className=" bg-[#96bf59] text-lg max-sm:text-base text-white rounded-2xl "
-    >
-      <LucideFileChartColumnIncreasing className="h-4 w-4" />
-      Case Study Competition
-    </Badge>
-  ),
-  InfoBadge: (
-    <Badge
-      variant="default"
-      className=" bg-[#F3F4BB] text-lg max-sm:text-base text-black rounded-2xl "
-    >
-      <IconRun className="h-4 w-4" />3 Rounds
-    </Badge>
-  ),
-};
+
 
 const data = [
   {

@@ -125,10 +125,10 @@ const Partners = () => {
       </div>
       <div className="flex flex-col h-full max-sm:h-fit pt-10 justify-center gap-5 items-center">
         <div className="max-sm:hidden">
-          <h2 className="text-6xl text-[#FFC221] max-sm:text-5xl font-semibold ">
+          <h2 className="text-6xl text-[#FFC221] max-[800px]:text-5xl  font-semibold ">
             Our Partners
           </h2>
-          <div className="flex gap-4">
+          <div className="flex gap-4 max-[800px]:w-[85%] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="115"

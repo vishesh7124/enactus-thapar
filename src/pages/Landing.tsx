@@ -12,7 +12,7 @@ import ar1 from "../assets/ar1.png";
 import { projectsType } from "@/types/projectType";
 import Project from "@/components/Project";
 import Partners from "@/components/Partners";
-// import { EventC } from "@/components/EventC";
+import { EventC } from "@/components/EventC";
 
 
 
@@ -98,6 +98,7 @@ const Landing = () => {
           ))}
         </div>
 
+      </div>
         <div
           className="flex  w-full h-[33rem] max-sm:h-fit pb-10 justify-evenly items-center max-sm:flex-col mb-8 overflow-hidden max-sm:!mask-none "
           style={{
@@ -105,11 +106,20 @@ const Landing = () => {
               "linear-gradient(to top, transparent 0%, black 12.5%, black 87.5%, transparent 100%)",
           }}
         >
-          {/* <EventC /> */}
+          <EventC />
+          {/* <Partners/> */}
+
+        </div>
+        <div
+          className="flex  w-full h-[33rem] max-sm:h-fit pb-10 justify-evenly items-center max-sm:flex-col mb-8 overflow-hidden max-sm:!mask-none "
+          style={{
+            maskImage:
+              "linear-gradient(to top, transparent 0%, black 12.5%, black 87.5%, transparent 100%)",
+          }}
+        >
           <Partners/>
 
         </div>
-      </div>
       {/* <div className=" h-full w-full flex justify-center items-center text-white">
         Hello
       </div> */}
