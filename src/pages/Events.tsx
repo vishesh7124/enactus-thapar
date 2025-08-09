@@ -144,7 +144,7 @@ const data = [
 const Events = () => {
   return (
     <>
-      <div className=" relative w-full mt-50 mb-16 text-center text-white text-8xl max-sm:text-5xl max-sm:mb-12 font-bold  ">
+      <div className="  w-full pt-50 mb-16 text-center text-white text-8xl max-sm:text-5xl max-sm:mb-12 font-bold  ">
         <img src={aarambh1} className="object-contain mx-auto w-xl max-sm:w-80" alt="" />
       </div>
       {/* <h1 className=" relative w-full my-50 text-center text-white text-8xl max-sm:text-5xl max-sm:mb-30 font-bold  ">
