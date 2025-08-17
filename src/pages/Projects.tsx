@@ -1,7 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
 import { ProjectType2 } from "@/types/projectType";
-import at1 from "../assets/atrangi-2.png"
-import at2 from "../assets/atrangi-3.png"
 
 
 

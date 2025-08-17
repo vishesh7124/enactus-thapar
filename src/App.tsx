@@ -8,6 +8,7 @@ import Landing from "./pages/Landing";
 import Projects from "./pages/Projects"
 import Events from "./pages/Events";
 import Team from "./pages/Team";
+import Proj from "./pages/Proj";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/events" element={<Events />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/proj" element={<Proj />} />
         </Routes>
         <Footer/>
       </BgWrapper>
