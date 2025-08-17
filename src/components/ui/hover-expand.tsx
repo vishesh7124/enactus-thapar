@@ -2,8 +2,9 @@
 
 import React, { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
-import { AuroraBackground } from "./aurora-background";
+import { cn } from "@/lib/utils";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
 
 
 interface HoverExpandProps {
@@ -45,42 +46,48 @@ export default function HoverExpand({
     }
   }, [isModalOpen])
 
+      const isMobile = useMediaQuery("(max-width: 480px)");
+
+
   return (
     <div className="relative">
-      <div className="mx-auto flex w-fit  gap-1 rounded-md pb-20 pt-10 md:gap-2">
+      <div className="mx-auto flex max-sm:flex-col w-fit  gap-1 max-sm:gap-4 rounded-md pb-20 pt-10 md:gap-2"
+      >
+
         {images.slice(0, maxThumbnails).map((imageUrl, i) => (
 
 
 
           <div
             key={`image-container-${i}`}
-            className={`group relative h-96 bg-[#30303074] overflow-hidden rounded-2xl transition-all duration-300 ${
-              selectedIndex === i ? "w-xl" : "w-4 sm:w-5 md:w-8 xl:w-12"
+            className={`group relative max-sm:w-72 max-sm:h-20 h-96 bg-[#30303074] overflow-hidden rounded-2xl transition-all duration-300 cursor-pointer ${
+              selectedIndex === i ? "w-xl max-sm:h-48 " : "w-4 sm:w-5 md:w-24 "
             }`}
-            onMouseEnter={() => setSelectedIndex(i)}
-            onMouseLeave={() => setSelectedIndex(i)}
+            // onMouseEnter={() => setSelectedIndex(i)}
+            // onMouseLeave={() => setSelectedIndex(i)}
             onClick={() => {
               setSelectedIndex(i)
-              setIsModalOpen(true)
+              // setIsModalOpen(true)
             }}
           >
-                                    {/* <AuroraBackground> */}
 
                   <motion.div
                     layoutId={`image-${i}`}
-                    className="absolute inset-0 size-full flex flex-col justify-center items-center   "
+                    animate={{rotateZ:selectedIndex === i || isMobile ? "0deg" : "-90deg"}}
+                    className={cn("absolute inset-0  size-full flex flex-col justify-center items-center   ","")}
+                    
                   >
-                    {/* <AnimatedGridPattern /> */}
+
+
                       
                       <img
                         src={imageUrl}
                         alt={`Image ${i + 1}`}
-                        className="size-full  w-72 object-contain  transition-transform duration-300 "
+                        className=" w-72 max-sm:h-16 object-contain  transition-transform duration-300 "
                       />
 
                   </motion.div>
 
-                                    {/* </AuroraBackground> */}
           </div>
 
 

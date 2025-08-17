@@ -11,36 +11,21 @@ const Projects = () => {
     const projects: ProjectType2[] = [
         {
             pname:"Atrangi",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
+            desc:"The fashion industry is a significant contributor to textile waste, with millions of tonnes of fabric being discarded annually. Project Atrangi aims to turn this reality on its head by transforming textile waste into sustainable fashion and creating meaningful livelihoods.",
             path:"atrangi",
-            img1:at1,
-            img2:at2
+            img1:"https://036za50svd.ufs.sh/f/YfSInbXC1cra1TXDE3pICgKVx8uDt0clRZnoyOB6HXMUqjpw",
+            img2:"https://036za50svd.ufs.sh/f/YfSInbXC1cragnuqv0VOPNT3mSyvtYUlgEZc9bMGIxJuFq5k"
 
         },
         {
-            pname:"Atrangi",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
-            path:"atrangi",
-            img1:at1,
-            img2:at2
+            pname:"Aarohan",
+            desc:"Plastic waste is one of the most urgent environmental crises we face today. However, at Project Aarohan, we see it as an opportunity for innovation and sustainable change. We aim to build a circular economy around plastic by creating a system that collects waste from colleges, corporations, and communities and transforms it into valuable products",
+            path:"aarohan",
+            img1:"https://036za50svd.ufs.sh/f/YfSInbXC1craBQ52tGxOXUp5FuvbP9OA3tCryjcldmYn6ez2",
+            img2:"https://036za50svd.ufs.sh/f/YfSInbXC1cra1A5thWZpICgKVx8uDt0clRZnoyOB6HXMUqjp"
 
         },
-        {
-            pname:"Atrangi",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
-            path:"atrangi",
-            img1:at1,
-            img2:at2
 
-        },
-        {
-            pname:"Atrangi",
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
-            path:"atrangi",
-            img1:at1,
-            img2:at2
-
-        },
     ]
 
   return (

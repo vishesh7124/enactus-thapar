@@ -23,8 +23,10 @@ const ProjectCard = ({project, className}:Props) => {
     </div>
     <div className="relative h-64 w-48 max-[960px]:h-56 max-[960px]:w-40 max-sm:h-40 max-sm:w-32 max-sm:mt-12 max-sm:ml-16 ">
       <motion.div initial={{rotate:-12}} whileInView={{rotate:5, transition:{type:"spring",duration:1}}} className="z-20 shadow-xl/30 absolute inset-0 rotate-12 left-4 top-10 card h-full w-full bg-white">
+        <img src={project.img1} className="size-full object-contain" alt="" />
       </motion.div>
       <motion.div  initial={{rotate:12}}  whileInView={{rotate:-5, transition:{type:"spring",duration:1}}} className=" z-10 shadow-xl/30 absolute inset-0   -top-10 -left-20 -rotate-12 card h-full w-full bg-amber-300">
+        <img src={project.img2} className="size-full object-contain" alt="" />
       </motion.div>
     </div>
   </div>
