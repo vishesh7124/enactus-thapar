@@ -5,29 +5,31 @@ import { cn } from "@/lib/utils";
 
 
 
-const KnowMore = ({path,className}:{path:string,className?:string}) => {
+const KnowMore = ({path,className,bgClass}:{path:string,className?:string,bgClass?:string}) => {
     const [buttonAnimation, setButtonAnimation] = useState(false);
 
   return (
     <NavLink to={path} className={cn("mt-6 inline-block relative w-fit cursor-pointer",className)}>
         
     <motion.div
-      className="absolute inset-0 -z-10 w-fit rounded-full bg-yellow-400"
+      className={cn("absolute inset-0 z-[4] w-fit rounded-full bg-yellow-400",bgClass)}
       initial={{ width: "30%" }}
       animate={{ width: buttonAnimation?"100%":"30%" }}
       transition={{
         duration: 0.5,
         ease: "easeInOut"
       }}
-
-    />
+      
+  // onMouseEnter={() => setButtonAnimation(true)}
+  // onMouseLeave={() => setButtonAnimation(false)}
+      />
   
 
       <motion.div
-        className="arrow  flex items-center w-fit rounded-full  "
-
+        className="arrow relative z-[5] flex items-center w-fit rounded-full  "
         onMouseEnter={() => setButtonAnimation(true)}
         onMouseLeave={() => setButtonAnimation(false)}
+
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +41,7 @@ const KnowMore = ({path,className}:{path:string,className?:string}) => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="feather feather-arrow-right bg-[#FFC221] rounded-full p-2 "
+          className={cn("feather feather-arrow-right bg-[#FFC221] rounded-full p-2 ",bgClass)}
         >
           <motion.line
             initial={{ opacity: 0, pathLength: 0 }}

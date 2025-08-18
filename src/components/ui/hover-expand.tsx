@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { cn } from "@/lib/utils";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import ProductSwapCard from "../shsfui/cards/product-swap-card";
 
 
 
@@ -60,7 +61,7 @@ export default function HoverExpand({
 
           <div
             key={`image-container-${i}`}
-            className={`group relative max-sm:w-72 max-sm:h-20 h-96 bg-[#30303074] overflow-hidden rounded-2xl transition-all duration-300 cursor-pointer ${
+            className={`group relative max-sm:w-72 max-sm:h-20 h-[30rem] bg-[#30303074] overflow-hidden rounded-2xl transition-all duration-300 cursor-pointer ${
               selectedIndex === i ? "w-xl max-sm:h-48 " : "w-4 sm:w-5 md:w-24 "
             }`}
             // onMouseEnter={() => setSelectedIndex(i)}
@@ -80,11 +81,12 @@ export default function HoverExpand({
 
 
                       
-                      <img
+                      {/* <img
                         src={imageUrl}
                         alt={`Image ${i + 1}`}
                         className=" w-72 max-sm:h-16 object-contain  transition-transform duration-300 "
-                      />
+                      /> */}
+                      <ProductSwapCard/>
 
                   </motion.div>
 
