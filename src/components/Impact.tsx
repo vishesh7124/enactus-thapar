@@ -5,13 +5,6 @@ import bag2 from "../assets/bag2.png";
 import fil1 from "../assets/fil1.png";
 import fil2 from "../assets/fil2.png";
 
-  const images = [
-    { src: bag1, alt: "Image 1" },
-    { src: bag2, alt: "Image 2" },
-    { src: fil1, alt: "Image 3" },
-    { src: fil2, alt: "Image 3" },
-  ]
-
 const Impact = () => {
   return (
         <div className="space-y-8 px-6 w-full max-w-7xl">
