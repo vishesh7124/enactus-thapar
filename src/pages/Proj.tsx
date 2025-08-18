@@ -2,6 +2,7 @@ import Solution_banner from "@/components/Solution_Banner";
 import aatrangiBanner from "../assets/atrangi_banner.png";
 import Problem_banner from "@/components/Problem_banner";
 import BusinessModel from "@/components/BuisnessModel";
+import Impact from "@/components/Impact";
 
 const Proj = () => {
   return (
@@ -10,6 +11,7 @@ const Proj = () => {
         <Problem_banner />
         <Solution_banner />
         <BusinessModel />
+        <Impact />
     </div>
   )
 }
