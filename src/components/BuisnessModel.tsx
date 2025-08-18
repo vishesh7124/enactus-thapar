@@ -25,11 +25,13 @@ export default function BusinessModel() {
   ];
 
   return (
-    <section className="px-6 py-12 max-w-7xl ">
-      {/* Heading */}
-      <h2 className="text-7xl text-[#FFD400] mb-10 text-left">
+    <div className="ml-0 w-full max-w-7xl">
+     <h2 className="text-7xl text-[#FFD400] mb-10 text-left">
         BUSINESS MODEL
-      </h2>
+    </h2>
+
+    <section className="px-6 py-12 max-w-7xl flex justify-center ">
+      {/* Heading */}
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-16">
@@ -55,5 +57,7 @@ export default function BusinessModel() {
         ))}
       </div>
     </section>
+    </div>
+
   );
 }
