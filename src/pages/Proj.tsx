@@ -3,6 +3,7 @@ import aatrangiBanner from "../assets/atrangi_banner.png";
 import Problem_banner from "@/components/Problem_banner";
 import BusinessModel from "@/components/BuisnessModel";
 import Impact from "@/components/Impact";
+import UnitEconomics from "@/components/UnitEconomics";
 
 const Proj = () => {
   return (
@@ -10,6 +11,7 @@ const Proj = () => {
         <img src={aatrangiBanner} className="mb-20 w-full h-auto max-w-[480px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1348px] p-10 sm:max-w-7xl"/>
         <Problem_banner />
         <Solution_banner />
+        <UnitEconomics />
         <BusinessModel />
         <Impact />
     </div>
