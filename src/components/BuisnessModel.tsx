@@ -6,30 +6,30 @@ export default function BusinessModel() {
     {
       id: 1,
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
     },
     {
       id: 2,
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
     },
     {
       id: 3,
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
     },
     {
       id: 4,
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given.this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
     }
   ];
 
   return (
     <div className="ml-0 w-full max-w-7xl">
-      <div className="flex flex-col justify-center items-start">
+      <div className="flex flex-col justify-center items-start max-sm:items-center">
 
-                  <h2 className="text-5xl text-[#FFC221] max-sm:text-5xl font-semibold uppercase ">
+                  <h2 className="text-5xl text-[#FFC221] max-sm:text-4xl font-semibold uppercase ">
               Business Model
             </h2>
             <div className="flex gap-4">
@@ -40,7 +40,7 @@ export default function BusinessModel() {
                 height="11"
                 viewBox="0 0 255 11"
                 fill="none"
-                className="max-md:w-40"
+                className="max-md:w-40 max-sm:w-32"
               >
                 <motion.path
                   initial={{ opacity: 0, pathLength: 0 }}
@@ -88,20 +88,24 @@ export default function BusinessModel() {
         {businessItems.map((item) => (
           <div
             key={item.id}
-            className="rounded-2xl overflow-hidden max-w-96"
+            className="rounded-2xl overflow-hidden max-w-96 bg-[#363636]/50"
           >
             {/* Image section */}
-            <div className="bg-[#FFD400]/40 flex items-center justify-center">
-              <img
-                src={item.img}
-                alt={`business-${item.id}`}
-                className="object-contain"
-              />
+            <div className="h-16 flex items-center justify-center p-4 ">
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img
+                  src={item.img}
+                  alt={`business-${item.id}`}
+                  className="object-contain w-full h-full"
+                />
+              </div>
             </div>
 
             {/* Content section */}
-            <div className="bg-[#414141]/60 text-white p-6 text-sm leading-relaxed">
-              {item.text}
+            <div className="p-6 text-white">
+              <p className="text-sm leading-relaxed text-center">
+                {item.text}
+              </p>
             </div>
           </div>
         ))}

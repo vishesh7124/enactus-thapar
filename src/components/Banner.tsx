@@ -11,7 +11,7 @@ const Banner: React.FC<BannerProps> = ({ title, children }) => {
   return (
     <div className=" bg-[#363636]/50 rounded-[50px] flex flex-col justify-center p-8 gap-8 max-sm:gap-10 lg:min-w-2/3">
                           <div>
-            <h2 className="text-4xl font-semibold font-poppins text-[#FFC221] max-sm:text-5xl ">
+            <h2 className="text-4xl font-semibold font-poppins text-[#FFC221] max-sm:text-4xl ">
               {title}
             </h2>
             <div className="flex gap-4">
