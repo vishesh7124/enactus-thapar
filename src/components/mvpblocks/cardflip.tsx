@@ -56,7 +56,7 @@ export default function CardFlip({
 
   return (
     <div
-      className="group relative h-[360px] w-full max-w-[300px] [perspective:2000px]"
+      className="group relative h-[360px]  w-72 max-[850px]:max-w-60 max-[850px]:max-h-72 [perspective:2000px]"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -73,7 +73,7 @@ export default function CardFlip({
         {/* Front of card */}
         <div
           className={cn(
-            'absolute inset-0 h-full w-full',
+            'absolute inset-0 h-full w-full flex flex-col justify-center items-center ',
             '[transform:rotateY(0deg)] [backface-visibility:hidden]',
             'overflow-hidden rounded-2xl',
             'bg-gradient-to-br from-white via-slate-50 to-slate-100',

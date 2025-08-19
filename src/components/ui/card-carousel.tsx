@@ -15,6 +15,10 @@ import {
 
 import { Badge } from "@/components/ui/badge"
 
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+
+
 interface CarouselProps {
   // images: { src: string; alt: string }[] | undefined
   autoplayDelay?: number
@@ -30,15 +34,30 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   showNavigation = true,
 }) => {
   const css = `
+
+  :root{
+    --swiper-theme-color:oklch(0.828 0.189 84.429)
+  }
+
   .swiper {
     width: 100%;
     padding-bottom: 50px;
   }
   
+
+  
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
+    width: 350px;
+    margin-right: 0!important;
+  }
+
+  @media screen and (max-width:480px){
+    .swiper-slide {
+      width: 350px;
+      margin-right: 0!important;
+    }
   }
   
   .swiper-slide img {
@@ -53,6 +72,10 @@ export const CardCarousel: React.FC<CarouselProps> = ({
     background: none;
   }
   `
+
+      const isMobile = useMediaQuery("(max-width: 850px)");
+
+
   return (
     <section className="w-full">
       <style>{css}</style>
@@ -62,7 +85,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
           <div className="flex w-full items-center justify-center gap-4">
             <div className="w-full">
               <Swiper
-                spaceBetween={50}
+                spaceBetween={isMobile?0:0}
                 autoplay={{
                   delay: autoplayDelay,
                   disableOnInteraction: false,
@@ -71,7 +94,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
-                slidesPerView={"auto"}
+                slidesPerView={3}
                 coverflowEffect={{
                   rotate: 0,
                   stretch: 0,
@@ -87,11 +110,12 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                       }
                     : undefined
                 }
+                initialSlide={1}
                 modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
               >
                 {children.map((comp:any, index:number) => (
                   <SwiperSlide key={index}>
-                    <div className="w-full rounded-3xl overflow-hidden">
+                    <div className="w-full flex justify-center items-center  rounded-3xl max-sm:w-44  overflow-hidden">
                       {/* <img
                         src={image.src}
                         alt={image.alt}
