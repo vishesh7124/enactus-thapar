@@ -4,25 +4,25 @@ import img2 from "../assets/ps/Bright ideas connected to financial results, Entr
 import img3 from "../assets/ps/Genius idea bulb with speech bubble and giant exclamation sign.svg"
 import img4 from "../assets/ps/Financial struggle with hands holding a banknote.svg"
 
-const Solution_banner = () => {
+interface solutionProps{
+  solutions:string[]
+}
+
+const images=[
+  img1,img2,img3,img4
+]
+
+const Solution_banner = ({solutions}:solutionProps) => {
   return (
     <Banner title="SOLUTIONS">
-        <div className="flex items-center gap-4">
-        <img src={img1} alt="ps1" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">SOLUTION 1</p>
+      {solutions.map((solution,index)=>(
+
+        <div key={index} className="flex items-center gap-4">
+        <img src={images[index]} alt="ps1" className="max-h-[100px] max-w-[100px]" />
+        <p className="text-white">{solution}</p>
       </div>
-      <div className="flex items-center gap-4">
-        <img src={img2} alt="ps2" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">SOLUTION 2</p>
-      </div>
-      <div className="flex items-center gap-4">
-        <img src={img3} alt="ps3" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">SOLUTION 3</p>
-      </div>
-      <div className="flex items-center gap-4">
-        <img src={img4} alt="ps4" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">SOLUTION 4</p>
-      </div>
+      ))}
+ 
     </Banner>
   )
 }

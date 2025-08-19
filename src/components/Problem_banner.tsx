@@ -4,25 +4,25 @@ import img2 from "../assets/ps/Credit card error on payment screen, Online trans
 import img3 from "../assets/ps/Businessman, calculator and browser.svg"
 import img4 from "../assets/ps/Rejected transaction or denied payment.svg"
 
-const Problem_banner = () => {
+interface ProblemProps{
+  problems:string[]
+}
+
+const images=[
+  img1,img2,img3,img4
+]
+
+const Problem_banner = ({problems}:ProblemProps) => {
   return (
     <Banner title="PROBLEM">
+      {problems.map((problem,index)=>(
       <div className="flex items-center  justify-start gap-4">
-        <img src={img1} alt="ps1" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">PROBLEM STATEMENT 1</p>
+        <img src={images[index]} alt="ps1" className="max-h-[100px] max-w-[100px]" />
+        <p className="text-white">{problem}</p>
       </div>
-      <div className="flex items-center justify-start gap-4">
-        <img src={img2} alt="ps2" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">PROBLEM STATEMENT 2</p>
-      </div>
-      <div className="flex items-center justify-start gap-4">
-        <img src={img3} alt="ps3" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">PROBLEM STATEMENT 3</p>
-      </div>
-      <div className="flex items-center justify-start gap-4">
-        <img src={img4} alt="ps4" className="max-h-[100px] max-w-[100px]" />
-        <p className="text-white">PROBLEM STATEMENT 4</p>
-      </div>
+
+      ))}
+
     </Banner>
   );
 };

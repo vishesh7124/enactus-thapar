@@ -41,7 +41,7 @@ const Banner: React.FC<BannerProps> = ({ title, children }) => {
 
             </div>
           </div> 
-      <div className="grid grid-flow-row grid-rows-1   lg:grid-flow-col lg:grid-rows-2 lg:gap-12 lg:text-base">
+      <div className="grid grid-flow-row grid-rows-1   lg:grid-flow-col lg:grid-rows-2 lg:gap-12 lg:text-xl font-satoshi">
         {children}
       </div>
     </div>
