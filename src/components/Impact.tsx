@@ -40,7 +40,7 @@ const impactData = [
 ]
 
 
-const Impact = () => {
+const Impact = ({impactData}:{impactData:object}) => {
   return (
         <div className="space-y-8 px-6 w-full max-w-7xl">
       {/* Heading */}

@@ -12,14 +12,48 @@ import ar1 from "../assets/ar1.png";
 import { projectsType } from "@/types/projectType";
 import Project from "@/components/Project";
 import Partners from "@/components/Partners";
-import { EventC } from "@/components/EventC";
 import { LandingEvent } from "@/components/LandingEvent";
+import { eventType1 } from "@/types/eventTypes";
 
 const assets ={
   atrangi:["https://036za50svd.ufs.sh/f/YfSInbXC1craBQ52tGxOXUp5FuvbP9OA3tCryjcldmYn6ez2","https://036za50svd.ufs.sh/f/YfSInbXC1craBQ52tGxOXUp5FuvbP9OA3tCryjcldmYn6ez2"]
 }
 
+  const events:eventType1[] = [
+    {
+      id:"1",
+      title: "Aarambh",
+      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
+      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
+      path:"aarambh",
 
+    },
+    {
+      id:"2",
+      title: "Aarambh",
+      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
+      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
+      path:"events",
+
+    },
+    {
+      id: "3",
+      title: "Aarambh",
+      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
+      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
+      path:"events",
+
+    },
+    {
+      id: "4",
+      title: "Aarambh",
+      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
+      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
+      path:"events",
+
+    },
+
+  ];
 
 const projects: projectsType = [
   {
@@ -28,7 +62,8 @@ const projects: projectsType = [
     logo: atrangi,
     prop1: bag1,
     prop2: bag2,
-    desc:"The fashion industry is a significant contributor to textile waste, with millions of tonnes of fabric being discarded annually. Project Atrangi aims to turn this reality on its head by transforming textile waste into sustainable fashion and creating meaningful livelihoods."
+    desc:"The fashion industry is a significant contributor to textile waste, with millions of tonnes of fabric being discarded annually. Project Atrangi aims to turn this reality on its head by transforming textile waste into sustainable fashion and creating meaningful livelihoods.",
+    path:"/atrangi"
     
   },
   {
@@ -39,6 +74,7 @@ const projects: projectsType = [
     prop2: fil1,
     // desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
     desc: "Plastic waste is one of the most urgent environmental crises we face today. However, at Project Aarohan, we see it as an opportunity for innovation and sustainable change. We aim to build a circular economy around plastic by creating a system that collects waste from colleges, corporations, and communities and transforms it into valuable products.",
+    path:"/aarohan"
   },
 ];
 
@@ -165,7 +201,7 @@ const Landing = () => {
 
             </div>
           </div>
-          <LandingEvent/>
+          <LandingEvent events={events}/>
 
         </div>
         <div

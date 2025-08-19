@@ -1,29 +1,7 @@
-import bag from "../assets/bag1.png"
 import { motion } from "motion/react";
 
-export default function BusinessModel() {
-  const businessItems = [
-    {
-      id: 1,
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
-    },
-    {
-      id: 2,
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
-    },
-    {
-      id: 3,
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
-    },
-    {
-      id: 4,
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
-    }
-  ];
+export default function BusinessModel({businessItems}:{businessItems:object}) {
+
 
   return (
     <div className="ml-0 w-full max-w-7xl">
@@ -85,9 +63,9 @@ export default function BusinessModel() {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-16">
-        {businessItems.map((item) => (
+        {businessItems.map((item,index) => (
           <div
-            key={item.id}
+            key={index}
             className="rounded-2xl overflow-hidden max-w-96 bg-[#363636]/50"
           >
             {/* Image section */}

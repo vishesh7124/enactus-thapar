@@ -4,16 +4,9 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import KnowMore from "../KnowMore";
+import { eventType1 } from "@/types/eventTypes";
 
-type Tab = {
-  title: string;
-  value: string;
-  content?: string | React.ReactNode | any;
-  logo?: string;
-  info?: string;
-  path?: string;
-};
-
+type Tab = eventType1
 export const Tabs = ({
   tabs: propTabs,
   containerClassName,
@@ -61,7 +54,7 @@ export const Tabs = ({
               transformStyle: "preserve-3d",
             }}
           >
-            {active.value === tab.value && (
+            {active.id === tab.id && (
               <motion.div
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
@@ -81,7 +74,7 @@ export const Tabs = ({
       <FadeInDiv
         tabs={tabs}
         active={active}
-        key={active.value}
+        key={active.id}
         hovering={hovering}
         className={cn("mt-24", contentClassName)}
       />
@@ -101,14 +94,14 @@ export const FadeInDiv = ({
   hovering?: boolean;
 }) => {
   const isActive = (tab: Tab) => {
-    return tab.value === tabs[0].value;
+    return tab.id === tabs[0].id;
   };
   return (
     <div className="relative w-full h-full">
       {tabs.map((tab, idx) => (
         <motion.div
-          key={tab.value}
-          layoutId={tab.value}
+          key={tab.id}
+          layoutId={tab.id}
           style={{
             scale: 1 - idx * 0.1,
             top: hovering ? idx * -50 : 0,
@@ -148,7 +141,7 @@ export const FadeInDiv = ({
             <div className="p-8 max-sm:pb-4 max-sm:pt-0 w-full flex flex-col items-start justify-start gap-2">
               <p className="text-sm md:text-base  font-light ">{tab.info}</p>
               <KnowMore
-                path={`/${tab.path}`}
+                path={`/events/${tab.path}`}
                 className="text-base font-normal self-end "
                 bgClass="bg-[#FFF9E8] "
               />

@@ -4,7 +4,8 @@ export type ProjectType = {
     logo: string,
     prop1: string,
     prop2: string,
-    desc: string
+    desc: string,
+    path:string
 }
 
 export type ProjectType2 = {

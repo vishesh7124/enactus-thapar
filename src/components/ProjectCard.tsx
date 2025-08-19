@@ -19,7 +19,7 @@ const ProjectCard = ({project, className}:Props) => {
       <p className="mt-6 max-sm:text-xs ">
         {project.desc}
       </p>
-      <KnowMore path={`/${project.path}`} className="max-[960px]:self-center" />
+      <KnowMore path={`/projects/${project.path}`} className="max-[960px]:self-center" />
     </div>
     <div className="relative h-64 w-48 max-[960px]:h-56 max-[960px]:w-40 max-sm:h-40 max-sm:w-32 max-sm:mt-12 max-sm:ml-16 ">
       <motion.div initial={{rotate:-12}} whileInView={{rotate:5, transition:{type:"spring",duration:1}}} className="z-20 shadow-xl/30 absolute inset-0 rotate-12 left-4 top-10 card h-full w-full bg-white">

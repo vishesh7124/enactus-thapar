@@ -4,10 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { IconRun } from "@tabler/icons-react";
 import { LucideFileChartColumnIncreasing } from "lucide-react";
 
+import { useParams } from "react-router";
 
 
-const data = [
-  {
+const eventData = {
+  aarambh:[{
     
       description: `Sustain-a-thon, part of AARAMBH 2024, was an overnight case study competition designed to tackle pressing challenges through creative solutions. It brought together students from diverse backgrounds to ideate and implement sustainable solutions, encouraging a problem-solving mindset focused on real-world issues.`,
       src: "https://036za50svd.ufs.sh/f/YfSInbXC1cra6Jp0Bvuwa2VWqBbmXfrFt5x8PvgCouzhRk9Y",
@@ -48,6 +49,7 @@ const data = [
       ),
     
   },
+
   {
     
       description: `Startup Foundry was a startup accelerator competition that brought startups and venture capitalists together, fostering entrepreneurship through funding opportunities, mentorship, pitching, and critical feedback. It acted as a catalyst for innovation and supported the growth of emerging ventures.`,
@@ -88,12 +90,17 @@ const data = [
         </Badge>
       ),
     
-  },
+  }
+
+
+],
 
 
 
-];
+};
 const Events = () => {
+    const params = useParams();
+  const event = eventData[encodeURIComponent(params.ename ?? "") as keyof typeof eventData];
   return (
     <>
       <div className="  w-full pt-50 mb-16 text-center text-white text-8xl max-sm:text-5xl max-sm:mb-12 font-bold  ">
@@ -103,7 +110,7 @@ const Events = () => {
         E V E N T S
       </h1> */}
       
-      {data.map((item, index) => (
+      {event.map((item, index) => (
         <div key={index} className="relative w-full overflow-clip">
           <Timeline
             item={item}

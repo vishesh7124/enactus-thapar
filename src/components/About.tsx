@@ -41,7 +41,7 @@ const About = () => {
           through innovative, scalable solutions, focusing on the intersection
           of sustainability, social impact, and engineering.
         </p>
-        <KnowMore path="/about" className="max-[960px]:self-center" />
+        <KnowMore path="/team" className="max-[960px]:self-center" />
       </div>
       <div className="h-80 max-sm:h-64 ">
         <img

@@ -22,8 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/proj" element={<Proj />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/projects/:pname" element={<Proj />} />
+          <Route path="/events/:ename" element={<Events />} />
           <Route path="/team" element={<Team />} />
           <Route path="/proj" element={<Proj />} />
         </Routes>

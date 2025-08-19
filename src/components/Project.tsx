@@ -149,7 +149,7 @@ const Project = ({ project }: Props) => {
           >
             {project.desc}
           </motion.p>
-          <KnowMore path="/p1" className="mt-3" />
+          <KnowMore path={`/projects${project.path}`} className="mt-3" />
         </motion.div>
       </div>
     </div>
