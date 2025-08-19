@@ -6,8 +6,8 @@ import img4 from "../assets/ps/Rejected transaction or denied payment.svg"
 
 const Problem_banner = () => {
   return (
-    <Banner title="PROBLEM STATEMENT">
-      <div className="flex items-center justify-start gap-4">
+    <Banner title="PROBLEM">
+      <div className="flex items-center  justify-start gap-4">
         <img src={img1} alt="ps1" className="max-h-[100px] max-w-[100px]" />
         <p className="text-white">PROBLEM STATEMENT 1</p>
       </div>

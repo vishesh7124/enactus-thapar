@@ -8,19 +8,19 @@ const Solution_banner = () => {
   return (
     <Banner title="SOLUTIONS">
         <div className="flex items-center gap-4">
-        <img src={img1} alt="ps1" className="max-h-[100px] min-w-[100px]" />
+        <img src={img1} alt="ps1" className="max-h-[100px] max-w-[100px]" />
         <p className="text-white">SOLUTION 1</p>
       </div>
       <div className="flex items-center gap-4">
-        <img src={img2} alt="ps2" className="max-h-[100px] min-w-[100px]" />
+        <img src={img2} alt="ps2" className="max-h-[100px] max-w-[100px]" />
         <p className="text-white">SOLUTION 2</p>
       </div>
       <div className="flex items-center gap-4">
-        <img src={img3} alt="ps3" className="max-h-[100px] min-w-[100px]" />
+        <img src={img3} alt="ps3" className="max-h-[100px] max-w-[100px]" />
         <p className="text-white">SOLUTION 3</p>
       </div>
       <div className="flex items-center gap-4">
-        <img src={img4} alt="ps4" className="max-h-[100px] min-w-[100px]" />
+        <img src={img4} alt="ps4" className="max-h-[100px] max-w-[100px]" />
         <p className="text-white">SOLUTION 4</p>
       </div>
     </Banner>
