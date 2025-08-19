@@ -62,7 +62,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
   
   .swiper-slide img {
     display: block;
-    width: 100%;
+    width: fit-content;
   }
   
   .swiper-3d .swiper-slide-shadow-left {

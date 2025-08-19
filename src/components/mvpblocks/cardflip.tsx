@@ -11,12 +11,14 @@
  */
 
 import { cn } from '@/lib/utils';
+import { url } from 'inspector';
 import { ArrowRight, Code2, Copy, Rocket, Zap } from 'lucide-react';
 import { useState } from 'react';
 
 export interface CardFlipProps {
   title: string;
-  bg_image:any
+  sdg:any,
+  bgImage?: string;
   // backCardContent:string, 
   color:string
   children:any
@@ -31,15 +33,13 @@ export interface CardFlipProps {
 function BackOfCard({color, children, title}:{color:string, children:string, title:any}){
   return (
     <>
-    <div className="border-[5px] border-color-white w-full h-full rounded-[10px]" style={{backgroundColor:color}}>
-      <div className="flex flex-col justify-end content-end gap-y-3.5">
-        <div className='flex  mt-8 ml-5 text-4xl font-bold'>
-        {title}
-        </div>
-        <div className="ml-5">
-        {children}
-        </div>
-      </div>
+    <div className="border-[5px] border-color-white w-full h-full rounded-[10px] flex flex-col justify-start items-start gap-3.5 p-4 max-sm:p-2" style={{backgroundColor:color}}>
+        <h3 className='text-4xl max-sm:text-xl font-semibold font-seriguel'>
+         {title}
+        </h3>
+        <p className='text-base max-[850px]:text-[0.75rem] w-full break-words whitespace-normal overflow-y-auto'>
+          {children}
+        </p>
     </div>
     </>
   );
@@ -47,7 +47,8 @@ function BackOfCard({color, children, title}:{color:string, children:string, tit
 
 export default function CardFlip({
   title,
-  bg_image,
+  sdg,
+  bgImage,
   color,
   children,
   
@@ -56,7 +57,7 @@ export default function CardFlip({
 
   return (
     <div
-      className="group relative h-[360px]  w-72 max-[850px]:max-w-60 max-[850px]:max-h-72 [perspective:2000px]"
+      className="group relative h-[360px]  w-72 max-[850px]:max-w-60 max-[850px]:max-h-72 max-sm:max-w-96 max-sm:w-96 max-sm:max-h-64 [perspective:2000px]"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -76,17 +77,23 @@ export default function CardFlip({
             'absolute inset-0 h-full w-full flex flex-col justify-center items-center ',
             '[transform:rotateY(0deg)] [backface-visibility:hidden]',
             'overflow-hidden rounded-2xl',
-            'bg-gradient-to-br from-white via-slate-50 to-slate-100',
-            'dark:from-zinc-900 dark:via-zinc-900/95 dark:to-zinc-800',
-            'border border-slate-200 dark:border-zinc-800/50',
+            // `bg-[url('${bgImage}')]`,
+            // 'bg-gradient-to-br from-white via-slate-50 to-slate-100',
+            // 'dark:from-zinc-900 dark:via-zinc-900/95 dark:to-zinc-800',
+            // 'border border-slate-200 dark:border-zinc-800/50',
+           
             'shadow-lg dark:shadow-xl',
             'transition-all duration-700',
             'group-hover:shadow-xl dark:group-hover:shadow-2xl',
             'group-hover:border-primary/20 dark:group-hover:border-primary/30',
             isFlipped ? 'opacity-0' : 'opacity-100',
           )}
+
+          style={{ backgroundImage: bgImage ? `url('${bgImage}')` : undefined, backgroundSize:"cover",backgroundRepeat:'no-repeat' }}
+
         >
-          <img src={bg_image} className='bg-no-repeat bg-center bg-[length:100%_100% relative'/>
+          
+          <img src={sdg} className='bg-no-repeat  h-36 w-fit object-contain absolute bottom-0 left-0'/>
           {/* Background gradient effect
           <div className="from-primary/5 dark:from-primary/10 absolute inset-0 bg-gradient-to-br via-transparent to-blue-500/5 dark:to-blue-500/10" />
 

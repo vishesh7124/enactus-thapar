@@ -5,15 +5,48 @@ import bag2 from "../assets/bag2.png";
 import fil1 from "../assets/fil1.png";
 import fil2 from "../assets/fil2.png";
 import { motion } from "motion/react";
+import sdg1 from "@/assets/sdg1.png";
+import bgImage from "@/assets/bgImage.webp"
+
+const impactData = [
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+]
 
 
 const Impact = () => {
   return (
         <div className="space-y-8 px-6 w-full max-w-7xl">
       {/* Heading */}
-      <div className="flex flex-col justify-center items-start">
+      <div className="flex flex-col justify-center items-start max-sm:items-center">
 
-                  <h2 className="text-5xl text-[#FFC221] max-sm:text-5xl font-semibold uppercase ">
+                  <h2 className="text-5xl text-[#FFC221] max-sm:text-4xl font-semibold uppercase ">
               Impact Created
             </h2>
             <div className="flex gap-4">
@@ -45,7 +78,7 @@ const Impact = () => {
                 height="11"
                 viewBox="0 0 255 11"
                 fill="none"
-                className="max-md:w-40"
+                className="max-md:w-40 max-sm:w-24"
               >
                 <motion.path
                   initial={{ opacity: 0, pathLength: 0 }}
@@ -70,35 +103,17 @@ const Impact = () => {
         showPagination={true}
         showNavigation={true}
         >
-        <CardFlip
-          title="Build MVPs Fast"
-          bg_image={bag1}
-          color="#0022ff"
-        >
-          Example text Example text Example text Example text Example text Example text Example text
-        </CardFlip>
-        <CardFlip
-          title="Build MVPs Fast"
-          bg_image={bag2}
-          color="#0a241f"
-        >
-          Example text Example text Example text Example text Example text Example text Example text
-        </CardFlip>
-        <CardFlip
-          title="Build MVPs Fast"
-          bg_image={fil1}
-          color="#0022ff"
-        >
-          Example text Example text Example text Example text Example text Example text Example text
-        </CardFlip>
-        <CardFlip
-          title="Build MVPs Fast"
-          bg_image={fil1}
-          color="#0022ff"
-        >
-          Example text Example text Example text Example text Example text Example text Example text
-        </CardFlip>
-
+          {impactData.map((item, index) => (
+  <CardFlip
+    key={index}
+    title={item.title}
+    sdg={item.sdg}
+    color={item.color}
+    bgImage={item.bgImage}
+  >
+    {item.desc}
+  </CardFlip>
+))}
 
       </CardCarousel>
     </div>
