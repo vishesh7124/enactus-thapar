@@ -21,7 +21,7 @@ const solutions= [
 const Proj = () => {
   return (
     <div className="relative z-0 w-full flex flex-col justify-center items-center gap-16 text-white pt-55">
-        <img src={aatrangiBanner} className="mb-20 w-full h-auto max-w-[480px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[55rem]  sm:max-w-7xl"/>
+        <img src={aatrangiBanner} className="mb-20 mx-auto w-4xl max-sm:w-2xl h-auto "/>
         <Problem_banner problems={problems} />
         <Solution_banner solutions={solutions} />
         <UnitEconomics />

@@ -3,6 +3,7 @@
 import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart, Sector } from "recharts"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
+import useMediaQuery from "@/hooks/useMediaQuery"
 
 import {
   Card,
@@ -21,13 +22,7 @@ import {
 
 export const description = "A donut chart with an active sector"
 
-const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-]
+
 
 const chartConfig = {
   visitors: {
@@ -55,17 +50,19 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-const ChartPieDonutActive = () => {
+
+const ChartPieDonutActive = ({chartData}:{chartData:object}) => {
+  const isMobile = useMediaQuery("(max-width:480px)")
   return (
-    <Card className="flex flex-col">
-      <CardHeader className="items-center pb-0">
+    <Card className="flex flex-col border-0 ">
+      {/* <CardHeader className="items-center pb-0">
         <CardTitle>Pie Chart - Donut Active</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
-      </CardHeader>
+      </CardHeader> */}
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square h-96 w-96 max-sm:h-72 max-sm:w-72"
         >
           <PieChart>
             <ChartTooltip
@@ -76,7 +73,7 @@ const ChartPieDonutActive = () => {
               data={chartData}
               dataKey="visitors"
               nameKey="browser"
-              innerRadius={60}
+              innerRadius={!isMobile?100:70}
               strokeWidth={5}
               activeIndex={0}
               activeShape={({
