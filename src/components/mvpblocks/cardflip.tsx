@@ -34,7 +34,7 @@ function BackOfCard({color, children, title}:{color:string, children:string, tit
   return (
     <>
     <div className="border-[5px] border-color-white w-full h-full rounded-[10px] flex flex-col justify-start items-start gap-3.5 p-4 max-sm:p-2" style={{backgroundColor:color}}>
-        <h3 className='text-4xl max-sm:text-xl font-semibold font-seriguel'>
+        <h3 className='text-3xl max-sm:text-xl font-semibold font-seriguel'>
          {title}
         </h3>
         <p className='text-base max-[850px]:text-[0.75rem] w-full break-words whitespace-normal overflow-y-auto'>
