@@ -1,43 +1,7 @@
 import { CardCarousel } from "@/components/ui/card-carousel"
 import CardFlip from "@/components/mvpblocks/cardflip";
-import bag1 from "../assets/bag1.png";
-import bag2 from "../assets/bag2.png";
-import fil1 from "../assets/fil1.png";
-import fil2 from "../assets/fil2.png";
 import { motion } from "motion/react";
-import sdg1 from "@/assets/sdg1.png";
-import bgImage from "@/assets/bgImage.webp"
 
-const impactData = [
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-]
 
 
 const Impact = ({impactData}:{impactData:object}) => {
