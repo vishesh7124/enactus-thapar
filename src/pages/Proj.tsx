@@ -14,7 +14,14 @@ import sdg11 from "@/assets/sdg/11.svg";
 import sdg12 from "@/assets/sdg/12.svg";
 import sdg13 from "@/assets/sdg/13.svg";
 import sdg14 from "@/assets/sdg/14.svg";
-import bgImage from "@/assets/bgImage.webp"
+import bg1 from "@/assets/sdg/1.jpg"
+import bg5 from "@/assets/sdg/5.jpg"
+import bg8 from "@/assets/sdg/8.jpg"
+import bg9 from "@/assets/sdg/9.jpg"
+import bg11 from "@/assets/sdg/11.jpg"
+import bg12 from "@/assets/sdg/12.jpg"
+import bg13 from "@/assets/sdg/13.jpg"
+import bg14 from "@/assets/sdg/14.jpg"
 import bag from "../assets/bag1.png"
 
 
@@ -64,28 +71,28 @@ const projectData = {
 impact:[
     {
       sdg:sdg8,
-      bgImage:bgImage,
+      bgImage:bg8,
       color:"#a21caf",
       title:"Good Jobs and Economic Growth",
       desc:"Generating livelihoods for artisans while promoting sustainable and ethical employment opportunities."
     },
     {
       sdg:sdg1,
-      bgImage:bgImage,
+      bgImage:bg1,
       color:"#ec1527",
       title:"No Poverty",
       desc:"Supporting traditional communities by providing consistent income through craft and textile upcycling."
     },
     {
       sdg:sdg5,
-      bgImage:bgImage,
+      bgImage:bg5,
       color:"#fa3927",
       title:"Gender Equality",
       desc:"Empowering women artisans by recognizing and sustaining their traditional embroidery and textile skills."
     },
     {
       sdg:sdg9,
-      bgImage:bgImage,
+      bgImage:bg9,
       color:"#f97316",
       title:"Innovation and Infrastructure",
       desc:"Promoting innovation through circular economy models and sustainable infrastructure in fashion."
@@ -140,35 +147,35 @@ impact:[
   impact: [
     {
       sdg: sdg9,
-      bgImage: bgImage,
+      bgImage: bg9,
       color: "#f26a2e",
       title: "Industry, Innovation and Infrastructure",
       desc: "Promotes sustainable 3D printing innovation by converting plastic waste into eco-friendly filament."
     },
     {
       sdg: sdg11,
-      bgImage: bgImage,
+      bgImage: bg11,
       color: "#f9c32d",
       title: "Sustainable Cities and Communities",
       desc: "Diverts plastic waste from landfills and builds sustainable practices across cities and institutions."
     },
     {
       sdg: sdg12,
-      bgImage: bgImage,
+      bgImage: bg12,
       color: "#bb9534",
       title: "Responsible Consumption and Production",
       desc: "Provides a circular economy solution by reusing plastic bottles into productive materials."
     },
     {
       sdg: sdg13,
-      bgImage: bgImage,
+      bgImage: bg13,
       color: "#3fa14c",
       title: "Climate Action",
       desc: "Reduces CO2 emissions by recycling plastic, cutting reliance on virgin plastic production."
     },
     {
     sdg: sdg14,
-    bgImage: bgImage,
+    bgImage: bg14,
     color: "#1f97d4",
     title: "Life Below Water",
     desc: "Prevents plastic waste from polluting oceans, protecting marine ecosystems and biodiversity."
