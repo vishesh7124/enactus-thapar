@@ -85,80 +85,82 @@ impact:[
   ]
 
   },
-  aarohan:{
-    name: "Atrangi",
-    description: "Atrangi is a project that focuses on sustainable fashion by transforming textile waste into valuable products, creating livelihoods and reducing environmental impact.",
-    banner: aatrangiBanner,
-    problems: [
-      "Problem 1",
-      "Problem 2",
-      "Problem 3",
-      "Problem 4",
-    ],
-    solutions: [
-      "Solution 1",
-      "Solution 2",
-      "Solution 3",
-      "Solution 4",
-    ],
-    chartData : [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-
-],
-  bModel:[
+  aarohan: {
+  name: "Aarohan",
+  description: "Project Aarohan converts plastic waste into high quality eco-friendly 3D printer filament, offering industries a sustainable alternative while giving plastic a renewed purpose.",
+  banner: aatrangiBanner,
+  problems: [
+    "Thousands of plastic bottles are discarded after single use despite being recyclable.",
+    "3D printing industry relies on expensive and unsustainable filament made from new plastic.",
+    "Plastic waste leads to environmental pollution and increased CO2 emissions.",
+    "Lack of sustainable alternatives for industries to reuse plastic effectively."
+  ],
+  solutions: [
+    "Collect plastic waste from institutions and NGOs.",
+    "Sort waste into PET, HDPE, LDPE, and MLPs for recycling.",
+    "Clean and process PET bottles to remove residues and contaminants.",
+    "Convert processed plastic into hollow 3D printing filament and distribute through partners and online."
+  ],
+  chartData: [
+    { browser: "Gross Profit", visitors: 49.2, fill: "var(--color-chrome)" },
+    { browser: "Labour", visitors: 12.1, fill: "var(--color-safari)" },
+    { browser: "Miscellaneous", visitors: 9.4, fill: "var(--color-firefox)" },
+    { browser: "Packaging", visitors: 10.5, fill: "var(--color-edge)" },
+    { browser: "Logistics", visitors: 7.1, fill: "var(--color-other)" },
+    { browser: "Sales & Marketing", visitors: 8.2, fill: "var(--color-chrome)" },
+    { browser: "Opex", visitors: 2.7, fill: "var(--color-safari)" },
+    { browser: "Maintenance", visitors: 0.8, fill: "var(--color-firefox)" }
+  ],
+  bModel: [
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "Plastic waste is collected from institutions and NGOs."
     },
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "Waste is segregated into PET, HDPE, LDPE, and MLPs."
     },
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "PET bottles are thoroughly cleaned to remove residues and contaminants."
     },
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "Processed plastic is converted into hollow 3D printing filament, 30% supplied to partner institutions and rest sold online/offline."
     }
   ],
-  impact:[
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
+  impact: [
+    {
+      sdg: sdg1,
+      bgImage: bgImage,
+      color: "#f26a2e",
+      title: "Industry, Innovation and Infrastructure",
+      desc: "Promotes sustainable 3D printing innovation by converting plastic waste into eco-friendly filament."
+    },
+    {
+      sdg: sdg1,
+      bgImage: bgImage,
+      color: "#f9c32d",
+      title: "Sustainable Cities and Communities",
+      desc: "Diverts plastic waste from landfills and builds sustainable practices across cities and institutions."
+    },
+    {
+      sdg: sdg1,
+      bgImage: bgImage,
+      color: "#bb9534",
+      title: "Responsible Consumption and Production",
+      desc: "Provides a circular economy solution by reusing plastic bottles into productive materials."
+    },
+    {
+      sdg: sdg1,
+      bgImage: bgImage,
+      color: "#3fa14c",
+      title: "Climate Action",
+      desc: "Reduces CO2 emissions by recycling plastic, cutting reliance on virgin plastic production."
+    }
   ]
+}
 
-  }
 }
 
 const Proj = () => {
