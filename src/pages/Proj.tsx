@@ -85,6 +85,80 @@ const projectData = {
   },
   ]
 
+  },
+  aarohan:{
+    name: "Atrangi",
+    description: "Atrangi is a project that focuses on sustainable fashion by transforming textile waste into valuable products, creating livelihoods and reducing environmental impact.",
+    banner: aatrangiBanner,
+    problems: [
+      "Problem 1",
+      "Problem 2",
+      "Problem 3",
+      "Problem 4",
+    ],
+    solutions: [
+      "Solution 1",
+      "Solution 2",
+      "Solution 3",
+      "Solution 4",
+    ],
+    chartData : [
+  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
+  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
+  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
+  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
+  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+
+],
+  bModel:[
+    {
+      img: bag,
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+    },
+    {
+      img: bag,
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+    },
+    {
+      img: bag,
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+    },
+    {
+      img: bag,
+      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+    }
+  ],
+  impact:[
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+  {
+    sdg:sdg1,
+    bgImage:bgImage,
+    color:"#ec1527",
+    title:"No Poverty",
+    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
+  },
+  ]
+
   }
 }
 
