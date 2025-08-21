@@ -6,22 +6,6 @@ import BusinessModel from "@/components/BuisnessModel";
 import Impact from "@/components/Impact";
 import UnitEconomics from "@/components/UnitEconomics";
 import { useParams } from "react-router";
-import sdg1 from "@/assets/sdg/1.svg";
-import sdg5 from "@/assets/sdg/5.svg";
-import sdg8 from "@/assets/sdg/8.svg";
-import sdg9 from "@/assets/sdg/9.svg";
-import sdg11 from "@/assets/sdg/11.svg";
-import sdg12 from "@/assets/sdg/12.svg";
-import sdg13 from "@/assets/sdg/13.svg";
-import sdg14 from "@/assets/sdg/14.svg";
-import bg1 from "@/assets/sdg/1.jpg"
-import bg5 from "@/assets/sdg/5.jpg"
-import bg8 from "@/assets/sdg/8.jpg"
-import bg9 from "@/assets/sdg/9.jpg"
-import bg11 from "@/assets/sdg/11.jpg"
-import bg12 from "@/assets/sdg/12.jpg"
-import bg13 from "@/assets/sdg/13.jpg"
-import bg14 from "@/assets/sdg/14.jpg"
 import bag from "../assets/bag1.png"
 
 
@@ -70,29 +54,29 @@ const projectData = {
     ],
 impact:[
     {
-      sdg:sdg8,
-      bgImage:bg8,
+      sdg:"https://036za50svd.ufs.sh/f/YfSInbXC1cra6vaKFauwa2VWqBbmXfrFt5x8PvgCouzhRk9Y",
+      bgImage:"https://036za50svd.ufs.sh/f/YfSInbXC1craipQyEigESFfnrLzoRwBHgeuaOYMWTsJGKt3y",
       color:"#a21caf",
       title:"Good Jobs and Economic Growth",
       desc:"Generating livelihoods for artisans while promoting sustainable and ethical employment opportunities."
     },
     {
-      sdg:sdg1,
-      bgImage:bg1,
+      sdg:"https://036za50svd.ufs.sh/f/YfSInbXC1cradMvNaCZaNCE9Y05lA6JoUnj3eIv4uzZp2HwT",
+      bgImage:"https://036za50svd.ufs.sh/f/YfSInbXC1craJOsHEMIsjWDNwuPZdyLV9hx1TFGc3XmrEl6e",
       color:"#ec1527",
       title:"No Poverty",
       desc:"Supporting traditional communities by providing consistent income through craft and textile upcycling."
     },
     {
-      sdg:sdg5,
-      bgImage:bg5,
+      sdg:"https://036za50svd.ufs.sh/f/YfSInbXC1craq3LZFNojK78Gv69VcfikS4TL5MOoXeE3plWa",
+      bgImage:"https://036za50svd.ufs.sh/f/YfSInbXC1crawy3xI7EhXGcFDjwE8f6qzIv23xnoKmYtBUsS",
       color:"#fa3927",
       title:"Gender Equality",
       desc:"Empowering women artisans by recognizing and sustaining their traditional embroidery and textile skills."
     },
     {
-      sdg:sdg9,
-      bgImage:bg9,
+      sdg:"https://036za50svd.ufs.sh/f/YfSInbXC1crauipDH3rVcatx3AoSbn2sWzdi9qvR4gEYumZT",
+      bgImage:"https://036za50svd.ufs.sh/f/YfSInbXC1craYSFVSsDXC1cratGf2Twm3597pPQZ84AlziLh",
       color:"#f97316",
       title:"Innovation and Infrastructure",
       desc:"Promoting innovation through circular economy models and sustainable infrastructure in fashion."
@@ -146,36 +130,36 @@ impact:[
   ],
   impact: [
     {
-      sdg: sdg9,
-      bgImage: bg9,
+      sdg: "https://036za50svd.ufs.sh/f/YfSInbXC1crauipDH3rVcatx3AoSbn2sWzdi9qvR4gEYumZT",
+      bgImage: "https://036za50svd.ufs.sh/f/YfSInbXC1craYSFVSsDXC1cratGf2Twm3597pPQZ84AlziLh",
       color: "#f26a2e",
       title: "Industry, Innovation and Infrastructure",
       desc: "Promotes sustainable 3D printing innovation by converting plastic waste into eco-friendly filament."
     },
     {
-      sdg: sdg11,
-      bgImage: bg11,
+      sdg: "https://036za50svd.ufs.sh/f/YfSInbXC1cra7FQcuf6jW5y6qV9UYXOfrsE1xmQ0wuctLGod",
+      bgImage: "https://036za50svd.ufs.sh/f/YfSInbXC1craKuWVHvC7pYrhdDK3lfwgez7Z8yuiTXFQMoVv",
       color: "#f9c32d",
       title: "Sustainable Cities and Communities",
       desc: "Diverts plastic waste from landfills and builds sustainable practices across cities and institutions."
     },
     {
-      sdg: sdg12,
-      bgImage: bg12,
+      sdg: "https://036za50svd.ufs.sh/f/YfSInbXC1craa15By0eXDPxQUIZSWwzyeFoJ6mu5H2GYpLik",
+      bgImage: "https://036za50svd.ufs.sh/f/YfSInbXC1craB8dUq9OXUp5FuvbP9OA3tCryjcldmYn6ez2G",
       color: "#bb9534",
       title: "Responsible Consumption and Production",
       desc: "Circular economy solution by reusing plastic bottles into productive materials."
     },
     {
-      sdg: sdg13,
-      bgImage: bg13,
+      sdg: "https://036za50svd.ufs.sh/f/YfSInbXC1cra6jypMEuwa2VWqBbmXfrFt5x8PvgCouzhRk9Y",
+      bgImage: "https://036za50svd.ufs.sh/f/YfSInbXC1craJKtb4eaIsjWDNwuPZdyLV9hx1TFGc3XmrEl6",
       color: "#3fa14c",
       title: "Climate Action",
       desc: "Reduces CO2 emissions by recycling plastic, cutting reliance on virgin plastic production."
     },
     {
-    sdg: sdg14,
-    bgImage: bg14,
+    sdg: "https://036za50svd.ufs.sh/f/YfSInbXC1craZDzZD7ByLspMeEURVoQT2KBmC7n3vFhIzOJ6",
+    bgImage: "https://036za50svd.ufs.sh/f/YfSInbXC1craYSVPzoXC1cratGf2Twm3597pPQZ84AlziLhB",
     color: "#1f97d4",
     title: "Life Below Water",
     desc: "Prevents plastic waste from polluting oceans, protecting marine ecosystems and biodiversity."
