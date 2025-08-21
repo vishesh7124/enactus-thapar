@@ -33,8 +33,8 @@ export interface CardFlipProps {
 function BackOfCard({color, children, title}:{color:string, children:string, title:any}){
   return (
     <>
-    <div className="border-[5px] border-color-white w-full h-full rounded-[10px] flex flex-col justify-start items-start gap-3.5 p-4 max-sm:p-2" style={{backgroundColor:color}}>
-        <h3 className='text-3xl max-sm:text-xl font-semibold font-seriguel'>
+    <div className="border-[5px] border-color-white w-full h-full min-h-fit rounded-[10px] flex flex-col justify-start items-start gap-3.5 p-4 max-sm:p-2" style={{backgroundColor:color}}>
+        <h3 className='text-2xl max-sm:text-base font-semibold font-seriguel w-full break-words whitespace-normal '>
          {title}
         </h3>
         <p className='text-base max-[850px]:text-[0.75rem] w-full break-words whitespace-normal overflow-y-auto'>
@@ -57,7 +57,7 @@ export default function CardFlip({
 
   return (
     <div
-      className="group relative h-[360px]  w-72 max-[850px]:max-w-60 max-[850px]:max-h-72 max-sm:max-w-96 max-sm:w-96 max-sm:max-h-64 [perspective:2000px]"
+      className="group relative h-[360px]  w-72 max-[850px]:max-w-60 max-[850px]:max-h-72 max-sm:max-w-96 max-sm:w-96 max-sm:h-72 max-sm:min-h-fit [perspective:2000px]"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >

@@ -9,7 +9,7 @@ import {motion} from "motion/react"
 
 const Banner: React.FC<BannerProps> = ({ title, children }) => {
   return (
-    <div className=" bg-[#363636]/50 rounded-[50px] flex flex-col justify-center p-8 gap-8 max-sm:gap-10 lg:min-w-2/3 max-w-7xl">
+    <div className=" bg-[#363636]/50 rounded-[50px] flex flex-col justify-center p-8 gap-8 max-sm:gap-10 lg:min-w-2/3 max-w-7xl  max-sm:w-11/12">
                           <div>
             <h2 className="text-4xl font-semibold font-poppins text-[#FFC221] max-sm:text-4xl ">
               {title}
@@ -41,7 +41,7 @@ const Banner: React.FC<BannerProps> = ({ title, children }) => {
 
             </div>
           </div> 
-      <div className="grid grid-flow-row grid-rows-1   lg:grid-flow-col lg:grid-rows-2 lg:gap-12 lg:text-xl font-satoshi">
+      <div className="grid grid-flow-row grid-rows-1   lg:grid-flow-col lg:grid-rows-2 lg:gap-12 lg:text-xl font-satoshi max-sm:text-base max-sm:gap-10">
         {children}
       </div>
     </div>

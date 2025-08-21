@@ -17,10 +17,10 @@ const Solution_banner = ({solutions}:solutionProps) => {
     <Banner title="SOLUTIONS">
       {solutions.map((solution,index)=>(
 
-        <div key={index} className="flex items-center gap-4">
+        <div key={index} className="flex items-center gap-4 max-sm:flex-col">
         <img src={images[index]} alt="ps1" className="max-h-[100px] max-w-[100px]" />
         <p className="text-white">{solution}</p>
-      </div>
+      </div>  
       ))}
  
     </Banner>

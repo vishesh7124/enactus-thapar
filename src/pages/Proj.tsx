@@ -164,7 +164,7 @@ impact:[
       bgImage: bg12,
       color: "#bb9534",
       title: "Responsible Consumption and Production",
-      desc: "Provides a circular economy solution by reusing plastic bottles into productive materials."
+      desc: "Circular economy solution by reusing plastic bottles into productive materials."
     },
     {
       sdg: sdg13,
@@ -191,7 +191,7 @@ const Proj = () => {
   const project = projectData[encodeURIComponent(params.pname ?? "") as keyof typeof projectData];
   return (
     <div className="relative z-0 w-full flex flex-col justify-center items-center gap-16 text-white pt-55">
-        <img src={project.banner} className="mb-20 mx-auto w-4xl max-sm:w-2xl h-auto "/>
+        <img src={project.banner} className="mb-20 mx-auto w-4xl max-sm:w-80  "/>
         <Problem_banner problems={project.problems} />
         <Solution_banner solutions={project.solutions} />
         <UnitEconomics chartData={project.chartData} />
