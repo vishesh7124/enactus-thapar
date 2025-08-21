@@ -15,12 +15,15 @@ const partners = {
   manipal: manipal,
   bonkers: bonkers,
   niine: niine,
-  atrangi: atrangi,
-  manipal2: manipal,
-  bonkers1: bonkers,
-  niine1: niine,
-  atrangi1: atrangi,
-  atrangi2: atrangi,
+  jal: "https://036za50svd.ufs.sh/f/YfSInbXC1craS1MmHkNCYemqFk0xN2zo31HQGtWZ6AaBv5if",
+  portronics: "https://036za50svd.ufs.sh/f/YfSInbXC1cra4UtgH3FWYlP7gQRDSOxpBzqmt2A1V5Lf9M6T",
+  easemytrip: "https://036za50svd.ufs.sh/f/YfSInbXC1crawAS5vsEhXGcFDjwE8f6qzIv23xnoKmYtBUsS",
+  uni: "https://036za50svd.ufs.sh/f/YfSInbXC1craKAEoHo7pYrhdDK3lfwgez7Z8yuiTXFQMoVv9",
+  gator: "https://036za50svd.ufs.sh/f/YfSInbXC1craQ6KRKy5Msjnw3YbiVHJ7Oht1mPUXg9qyFc4D",
+  plum: "https://036za50svd.ufs.sh/f/YfSInbXC1cra5v4TuZzD9S2binHW4PZ0KNe3FuAB8wM7yd5s",
+  bandhan:"https://036za50svd.ufs.sh/f/YfSInbXC1craEqlHkw0QijpBzD7VCrJnyUa4cxFdm8Lh92SZ",
+  redBull:"https://036za50svd.ufs.sh/f/YfSInbXC1craS5tmloNCYemqFk0xN2zo31HQGtWZ6AaBv5if",
+  innov:"https://036za50svd.ufs.sh/f/YfSInbXC1cra5DPQj2zD9S2binHW4PZ0KNe3FuAB8wM7yd5s"
 };
 
 const Partners = () => {
@@ -117,6 +120,7 @@ const Partners = () => {
                   src={item}
                   customGrid={{ rows: 4, cols: 6 }}
                   grayscaleAnimation
+                  imageClass="object-contain"
                 />
               </figure>
             ))}
@@ -174,15 +178,13 @@ const Partners = () => {
           </div>
         </div>
 
-        <div className="mx-auto flex flex-col justify-center items-center max-w-lg text-lg  max-[840px]:w-2/3 font-semibold text-center tracking-tight  md:text-xl">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor harum
-          veniam consequuntur fuga labore adipisci dolorum hic libero officiis
-          possimus.
+        <div className="mx-auto flex flex-col justify-center items-center max-w-lg text-lg  max-[840px]:w-2/3 font-normal text-center tracking-tight  md:text-xl">
+Our journey is powered by the support of our valued partners whose trust and contributions help us create impact, drive innovation, and build a sustainable future together. We grow, achieve, and inspire when we 
           <PointerHighlight
             rectangleClassName="bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600"
             pointerClassName="text-yellow-500"
           >
-            <span className="relative z-10">Collaborate</span>
+            <span className="relative z-10 text-[#FFC221]">collaborate.</span>
           </PointerHighlight>
         </div>
 

@@ -65,7 +65,7 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative block text-black dark:text-white">
+            <span className="relative block max-sm:text-[0.6rem] text-black dark:text-white">
               {tab.title}
             </span>
           </button>
@@ -118,10 +118,15 @@ export const FadeInDiv = ({
             <div className=" relative flex w-full max-sm:flex-col-reverse  justify-start items-center">
               <div className=" relative max-[840px]:w-[30%] max-sm:w-full w-[45%]  flex justify-center items-center">
                 {!tab.logo ? (
-                  <div className="h-64 flex justify-center items-center mx-auto w-64 max-[840px]:w-36 max-sm:h-36 max-sm:w-36  " >
-                    <p className="">{tab.title}</p>
+<div className="h-64 uppercase flex flex-col justify-center items-center mx-auto w-64 max-[840px]:w-36 max-sm:h-36 max-sm:w-36">
+    <p
+      
+      className="text-[#FFC221]" 
+    >
+      {tab.title}
+    </p>
 
-                  </div>
+</div>
                 ) : (
                   <img
                     src={tab.logo}
@@ -131,7 +136,7 @@ export const FadeInDiv = ({
                 )}
               </div>
               <img
-                src="https://036za50svd.ufs.sh/f/YfSInbXC1craZpkyqMByLspMeEURVoQT2KBmC7n3vFhIzOJ6"
+                src={tab.image}
                 alt="dummy image"
                 // width="1000"
                 // height="1000"
@@ -140,11 +145,14 @@ export const FadeInDiv = ({
             </div>
             <div className="p-8 max-sm:pb-4 max-sm:pt-0 w-full flex flex-col items-start justify-start gap-2">
               <p className="text-sm md:text-base  font-light ">{tab.info}</p>
+              {tab.path && <>
+              
               <KnowMore
                 path={`/events/${tab.path}`}
                 className="text-base font-normal self-end "
                 bgClass="bg-[#FFF9E8] "
               />
+              </>}
             </div>
           </div>
         </motion.div>

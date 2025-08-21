@@ -24,32 +24,39 @@ const assets ={
       id:"1",
       title: "Aarambh",
       logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
-      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
+      info:"Aarambh ’24, the annual fest of Enactus Thapar, featured a diverse lineup of entrepreneurial and innovation-driven events. From Sustainathon, a sustainability-focused case study competition, to Startup Foundry, a Shark Tank-style fundraising platform, and Synergy Spark, an intra-college case study challenge, the fest celebrated creativity and problem-solving. It also hosted Founder’s Nexus, an inspiring speaker session with startup founders, bringing real-world insights to the student community.",
       path:"aarambh",
+      image:"https://036za50svd.ufs.sh/f/YfSInbXC1craZpkyqMByLspMeEURVoQT2KBmC7n3vFhIzOJ6"
 
     },
+
     {
-      id:"2",
-      title: "Aarambh",
-      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
-      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
-      path:"events",
+      id: "2",
+      title: "Social Budgeting Convention",
+      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craeM98cFbS2oFxZ5GTWDmqzdXjcJE9a8Ar3Vfl",
+      info:"The Social Budgeting Convention 2023, hosted by Enactus Thapar, brought together aspiring student entrepreneurs, social innovators, and changemakers under one roof. The event offered a platform to discuss sustainable business ideas, exchange insights, and network with like-minded peers and mentors. Through interactive sessions and showcases, the convention underscored Enactus Thapar’s commitment to building socially conscious ventures.",
+      image:"https://036za50svd.ufs.sh/f/YfSInbXC1cra1QGgkWpICgKVx8uDt0clRZnoyOB6HXMUqjpw",
+            path:"aarambh",
+
 
     },
     {
       id: "3",
-      title: "Aarambh",
-      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
-      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
-      path:"events",
+      title: "Corporate Roadies",
+      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1cra6WcmaHzuwa2VWqBbmXfrFt5x8PvgCouzhRk9",
+      info:"Corporate Roadies 2023, hosted by Enactus Thapar, was an engaging and dynamic challenge that brought together students to experience the thrill of the corporate world through team-based tasks and real-world business simulations. Participants stepped into the shoes of budding professionals, navigating competitive scenarios and leadership tests designed to mirror high-stakes corporate environments.",
+      image:"https://036za50svd.ufs.sh/f/YfSInbXC1craI7KsVc4UlNpgxM4EFKGXn0qtWQwsLb9H7iPA",
+            path:"aarambh",
+
 
     },
-    {
-      id: "4",
-      title: "Aarambh",
-      logo:"https://036za50svd.ufs.sh/f/YfSInbXC1craS0DlV1NCYemqFk0xN2zo31HQGtWZ6AaBv5if",
-      info:"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
-      path:"events",
+        {
+      id:"4",
+      title: "Deepotsav",
+      info:"Deepotsav, one of Enactus Thapar’s flagship cultural initiatives, is a Diwali celebration that blends festivity with social impact. The event brings the campus community together to light diyas, celebrate the festival of lights, and promote eco-friendly practices. With stalls, activities, and a focus on sustainability, Deepotsav spreads joy while reinforcing the values of tradition, inclusivity, and responsibility.",
+      image:"https://036za50svd.ufs.sh/f/YfSInbXC1craSAdbzHNCYemqFk0xN2zo31HQGtWZ6AaBv5if",
+            path:"aarambh",
+
 
     },
 

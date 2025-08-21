@@ -4,4 +4,5 @@ export type eventType1 = {
   logo?: string;
   info?: string;
   path?: string;
+  image:string;
 };
