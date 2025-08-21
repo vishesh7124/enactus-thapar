@@ -1,12 +1,27 @@
 import Solution_banner from "@/components/Solution_Banner";
 import aatrangiBanner from "../assets/atrangi_banner.png";
+import aarohanBanner from "../assets/Aarohan_banner.png";
 import Problem_banner from "@/components/Problem_banner";
 import BusinessModel from "@/components/BuisnessModel";
 import Impact from "@/components/Impact";
 import UnitEconomics from "@/components/UnitEconomics";
 import { useParams } from "react-router";
-import sdg1 from "@/assets/sdg1.png";
-import bgImage from "@/assets/bgImage.webp"
+import sdg1 from "@/assets/sdg/1.svg";
+import sdg5 from "@/assets/sdg/5.svg";
+import sdg8 from "@/assets/sdg/8.svg";
+import sdg9 from "@/assets/sdg/9.svg";
+import sdg11 from "@/assets/sdg/11.svg";
+import sdg12 from "@/assets/sdg/12.svg";
+import sdg13 from "@/assets/sdg/13.svg";
+import sdg14 from "@/assets/sdg/14.svg";
+import bg1 from "@/assets/sdg/1.jpg"
+import bg5 from "@/assets/sdg/5.jpg"
+import bg8 from "@/assets/sdg/8.jpg"
+import bg9 from "@/assets/sdg/9.jpg"
+import bg11 from "@/assets/sdg/11.jpg"
+import bg12 from "@/assets/sdg/12.jpg"
+import bg13 from "@/assets/sdg/13.jpg"
+import bg14 from "@/assets/sdg/14.jpg"
 import bag from "../assets/bag1.png"
 
 
@@ -17,149 +32,157 @@ const projectData = {
     description: "Atrangi is a project that focuses on sustainable fashion by transforming textile waste into valuable products, creating livelihoods and reducing environmental impact.",
     banner: aatrangiBanner,
     problems: [
-      "Problem 1",
-      "Problem 2",
-      "Problem 3",
-      "Problem 4",
+      "Post-pandemic economic decline threatening artisans and traditional crafts.",
+      "Water pollution caused by the fashion industry, consuming ~79 billion cubic meters of water annually and generating 20% of global wastewater.",
+      "Non-decomposable textile waste, with ~90 million tons generated annually that take years to break down.",
+      "Local communities dependent on crafts face declining income opportunities due to industry disruption."
     ],
     solutions: [
-      "Solution 1",
-      "Solution 2",
-      "Solution 3",
-      "Solution 4",
+      "Upcycling: Recycling and reusing textile waste into sustainable fashion products.",
+      "Cost savings: Affordable fusion-wear crafted by artisans, linking heritage with modernity.",
+      "Reduce wastage: Transforming textile waste into designer products with minimal impact.",
+      "Circular economy: Supporting a continuous reuse cycle to minimize environmental harm."
     ],
     chartData : [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-
+  { browser: "Fabric Cost", visitors: 30, fill: "var(--color-chrome)" },
+  { browser: "Artisan Pay", visitors: 25, fill: "var(--color-safari)" },
+  { browser: "Logistics", visitors: 20, fill: "var(--color-firefox)" },
+  { browser: "Packaging", visitors: 15, fill: "var(--color-edge)" },
+  { browser: "Marketing", visitors: 10, fill: "var(--color-other)" },
 ],
   bModel:[
+      {
+        img: bag,
+        text: "Value Proposition: Sustainable fashion products that merge tradition with modernity, customization options, and eco-friendly practices."
+      },
+      {
+        img: bag,
+        text: "Customer Segments: Ethical consumers, eco-conscious youth, NGOs, local communities, and educational institutions."
+      },
+      {
+        img: bag,
+        text: "Key Activities & Resources: Product design, artisan collaboration, recycled materials, e-commerce, awareness campaigns, branding."
+      },
+      {
+        img: bag,
+        text: "Revenue & Cost: Income through product sales, collaborations, and customization fees; costs include artisan compensation, logistics, marketing, and sustainable packaging."
+      }
+    ],
+impact:[
+    {
+      sdg:sdg8,
+      bgImage:bg8,
+      color:"#a21caf",
+      title:"Good Jobs and Economic Growth",
+      desc:"Generating livelihoods for artisans while promoting sustainable and ethical employment opportunities."
+    },
+    {
+      sdg:sdg1,
+      bgImage:bg1,
+      color:"#ec1527",
+      title:"No Poverty",
+      desc:"Supporting traditional communities by providing consistent income through craft and textile upcycling."
+    },
+    {
+      sdg:sdg5,
+      bgImage:bg5,
+      color:"#fa3927",
+      title:"Gender Equality",
+      desc:"Empowering women artisans by recognizing and sustaining their traditional embroidery and textile skills."
+    },
+    {
+      sdg:sdg9,
+      bgImage:bg9,
+      color:"#f97316",
+      title:"Innovation and Infrastructure",
+      desc:"Promoting innovation through circular economy models and sustainable infrastructure in fashion."
+    }
+  ]
+  },
+
+  aarohan: {
+  name: "Aarohan",
+  description: "Project Aarohan converts plastic waste into high quality eco-friendly 3D printer filament, offering industries a sustainable alternative while giving plastic a renewed purpose.",
+  banner: aarohanBanner,
+  problems: [
+    "Thousands of plastic bottles are discarded after single use despite being recyclable.",
+    "3D printing industry relies on expensive and unsustainable filament made from new plastic.",
+    "Plastic waste leads to environmental pollution and increased CO2 emissions.",
+    "Lack of sustainable alternatives for industries to reuse plastic effectively."
+  ],
+  solutions: [
+    "Collect plastic waste from institutions and NGOs.",
+    "Sort waste into PET, HDPE, LDPE, and MLPs for recycling.",
+    "Clean and process PET bottles to remove residues and contaminants.",
+    "Convert processed plastic into hollow 3D printing filament and distribute through partners and online."
+  ],
+  chartData: [
+    { browser: "Gross Profit", visitors: 49.2, fill: "var(--color-chrome)" },
+    { browser: "Labour", visitors: 12.1, fill: "var(--color-safari)" },
+    { browser: "Miscellaneous", visitors: 9.4, fill: "var(--color-firefox)" },
+    { browser: "Packaging", visitors: 10.5, fill: "var(--color-edge)" },
+    { browser: "Logistics", visitors: 7.1, fill: "var(--color-other)" },
+    { browser: "Sales & Marketing", visitors: 8.2, fill: "var(--color-chrome)" },
+    { browser: "Opex", visitors: 2.7, fill: "var(--color-safari)" },
+    { browser: "Maintenance", visitors: 0.8, fill: "var(--color-firefox)" }
+  ],
+  bModel: [
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "Plastic waste is collected from institutions and NGOs."
     },
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "Waste is segregated into PET, HDPE, LDPE, and MLPs."
     },
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "PET bottles are thoroughly cleaned to remove residues and contaminants."
     },
     {
       img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      text: "Processed plastic is converted into hollow 3D printing filament, 30% supplied to partner institutions and rest sold online/offline."
     }
   ],
-  impact:[
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  ]
-
-  },
-  aarohan:{
-    name: "Atrangi",
-    description: "Atrangi is a project that focuses on sustainable fashion by transforming textile waste into valuable products, creating livelihoods and reducing environmental impact.",
-    banner: aatrangiBanner,
-    problems: [
-      "Problem 1",
-      "Problem 2",
-      "Problem 3",
-      "Problem 4",
-    ],
-    solutions: [
-      "Solution 1",
-      "Solution 2",
-      "Solution 3",
-      "Solution 4",
-    ],
-    chartData : [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-
-],
-  bModel:[
+  impact: [
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg: sdg9,
+      bgImage: bg9,
+      color: "#f26a2e",
+      title: "Industry, Innovation and Infrastructure",
+      desc: "Promotes sustainable 3D printing innovation by converting plastic waste into eco-friendly filament."
     },
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg: sdg11,
+      bgImage: bg11,
+      color: "#f9c32d",
+      title: "Sustainable Cities and Communities",
+      desc: "Diverts plastic waste from landfills and builds sustainable practices across cities and institutions."
     },
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg: sdg12,
+      bgImage: bg12,
+      color: "#bb9534",
+      title: "Responsible Consumption and Production",
+      desc: "Provides a circular economy solution by reusing plastic bottles into productive materials."
     },
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg: sdg13,
+      bgImage: bg13,
+      color: "#3fa14c",
+      title: "Climate Action",
+      desc: "Reduces CO2 emissions by recycling plastic, cutting reliance on virgin plastic production."
+    },
+    {
+    sdg: sdg14,
+    bgImage: bg14,
+    color: "#1f97d4",
+    title: "Life Below Water",
+    desc: "Prevents plastic waste from polluting oceans, protecting marine ecosystems and biodiversity."
     }
-  ],
-  impact:[
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
   ]
+}
 
-  }
 }
 
 const Proj = () => {
