@@ -79,7 +79,7 @@ impact:[
     {
       sdg:sdg5,
       bgImage:bgImage,
-      color:"#d946ef",
+      color:"#fa3927",
       title:"Gender Equality",
       desc:"Empowering women artisans by recognizing and sustaining their traditional embroidery and textile skills."
     },
