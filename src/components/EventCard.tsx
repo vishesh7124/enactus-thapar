@@ -90,7 +90,7 @@ export function EventCard({ card }) {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-80 max-[380px]:w-64  sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top m-12"
+                  className="w-72 max-[380px]:w-64  sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top m-12"
                 />
                 <Marquee pauseOnHover className="[--duration:20s] ">
                   {card.gallery.map((item, index) => (
@@ -112,7 +112,9 @@ export function EventCard({ card }) {
 
               <div>
                 <div className="flex justify-between items-start p-4">
-                  <div className="bg-[#f3f4bbd2] p-4 font-satoshi font-semibold rounded-lg">
+                  <div 
+                  style={{background:card.colors.primary}}
+                  className=" p-4 font-satoshi font-semibold rounded-lg">
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
                       className="text-[#3E3C33] text-base max-sm:text-sm"
@@ -240,7 +242,7 @@ export function EventCard({ card }) {
           <div className="flex gap-12 flex-col  w-full">
             <motion.div layoutId={`image-${card.title}-${id}`}>
               <div className="flex justify-center items-center text-[#F3F4BB]">
-                <img src={card.src} className="object-contain w-xl " alt="" />
+                <img src={card.src} className="object-contain w-80 " alt="" />
               </div>
             </motion.div>
             <div className="flex justify-center items-center flex-col  p-4 font-satoshi font-semibold rounded-lg">
