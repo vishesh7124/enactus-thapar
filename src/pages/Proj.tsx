@@ -17,72 +17,71 @@ const projectData = {
     description: "Atrangi is a project that focuses on sustainable fashion by transforming textile waste into valuable products, creating livelihoods and reducing environmental impact.",
     banner: aatrangiBanner,
     problems: [
-      "Problem 1",
-      "Problem 2",
-      "Problem 3",
-      "Problem 4",
+      "Post-pandemic economic decline threatening artisans and traditional crafts.",
+      "Water pollution caused by the fashion industry, consuming ~79 billion cubic meters of water annually and generating 20% of global wastewater.",
+      "Non-decomposable textile waste, with ~90 million tons generated annually that take years to break down.",
+      "Local communities dependent on crafts face declining income opportunities due to industry disruption."
     ],
     solutions: [
-      "Solution 1",
-      "Solution 2",
-      "Solution 3",
-      "Solution 4",
+      "Upcycling: Recycling and reusing textile waste into sustainable fashion products.",
+      "Cost savings: Affordable fusion-wear crafted by artisans, linking heritage with modernity.",
+      "Reduce wastage: Transforming textile waste into designer products with minimal impact.",
+      "Circular economy: Supporting a continuous reuse cycle to minimize environmental harm."
     ],
     chartData : [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-
+  { browser: "Fabric Cost", visitors: 30, fill: "var(--color-chrome)" },
+  { browser: "Artisan Pay", visitors: 25, fill: "var(--color-safari)" },
+  { browser: "Logistics", visitors: 20, fill: "var(--color-firefox)" },
+  { browser: "Packaging", visitors: 15, fill: "var(--color-edge)" },
+  { browser: "Marketing", visitors: 10, fill: "var(--color-other)" },
 ],
   bModel:[
+      {
+        img: bag,
+        text: "Value Proposition: Sustainable fashion products that merge tradition with modernity, customization options, and eco-friendly practices."
+      },
+      {
+        img: bag,
+        text: "Customer Segments: Ethical consumers, eco-conscious youth, NGOs, local communities, and educational institutions."
+      },
+      {
+        img: bag,
+        text: "Key Activities & Resources: Product design, artisan collaboration, recycled materials, e-commerce, awareness campaigns, branding."
+      },
+      {
+        img: bag,
+        text: "Revenue & Cost: Income through product sales, collaborations, and customization fees; costs include artisan compensation, logistics, marketing, and sustainable packaging."
+      }
+    ],
+impact:[
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg:sdg1,
+      bgImage:bgImage,
+      color:"#a21caf",
+      title:"Good Jobs and Economic Growth",
+      desc:"Generating livelihoods for artisans while promoting sustainable and ethical employment opportunities."
     },
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg:sdg1,
+      bgImage:bgImage,
+      color:"#ec1527",
+      title:"No Poverty",
+      desc:"Supporting traditional communities by providing consistent income through craft and textile upcycling."
     },
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg:sdg1,
+      bgImage:bgImage,
+      color:"#d946ef",
+      title:"Gender Equality",
+      desc:"Empowering women artisans by recognizing and sustaining their traditional embroidery and textile skills."
     },
     {
-      img: bag,
-      text: "this content is meant for business content. it explaints the contents in brief. basic understanding given."
+      sdg:sdg1,
+      bgImage:bgImage,
+      color:"#f97316",
+      title:"Innovation and Infrastructure",
+      desc:"Promoting innovation through circular economy models and sustainable infrastructure in fashion."
     }
-  ],
-  impact:[
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
-  {
-    sdg:sdg1,
-    bgImage:bgImage,
-    color:"#ec1527",
-    title:"No Poverty",
-    desc:"lorem10duhhdjkhjksbjvkjbvkjvskbljvbkjbvjdbdvjbkjvdbkjbvjbjvbkjbdvjkbvdkjbdvkjbj"
-  },
   ]
 
   },
