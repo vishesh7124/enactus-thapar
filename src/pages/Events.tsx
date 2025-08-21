@@ -90,7 +90,84 @@ const eventData = {
         </Badge>
       ),
     
-  }
+  },
+  {
+    
+      description: `Enactus Thapar hosted Founders Nexus, a speaker session where successful founders shared their journeys, inspiring students to embrace entrepreneurship and transform ideas into ventures.`,
+      src: "https://036za50svd.ufs.sh/f/YfSInbXC1craoqFdcuyEPvVd6C9cgj1akOW07lBw82zFhUIe",
+            rounds: [
+        "Pass Through Hoop",
+        "Snatch the chain",
+        "Strategy Showdown",
+        "The Fireball"
+      ],
+      numbers: {
+        "Founders Invited": 4,
+        "Aspiring students attended": 350,
+        "Key startup strategies": 10,
+        "Networking connections": 20,
+      },
+      colors: {
+        primary: "#FFEC86",
+        secondary: "#6E6546",
+      },
+      gallery: ["https://036za50svd.ufs.sh/f/YfSInbXC1craZpkyqMByLspMeEURVoQT2KBmC7n3vFhIzOJ6", "https://036za50svd.ufs.sh/f/YfSInbXC1craLmcc3eAasymAnFetuk7X2SOh8WVYMD9Rb5Hj", "https://036za50svd.ufs.sh/f/YfSInbXC1craCtWCssaoPUgYFIEdh5u8zqH0nK2vxWNQfcA9", "https://036za50svd.ufs.sh/f/YfSInbXC1crafvPXy9j0SRV6KNTqaUeop2EnciuOtdMxjgJ1", "https://036za50svd.ufs.sh/f/YfSInbXC1craXxgZWunnT9aFDvBh5mpjV1SkxzgXKsGiAR7C"],
+      sdg: ["https://036za50svd.ufs.sh/f/YfSInbXC1craxmMmc6sOeNFI9nTjri4cEk1y8UKdBJgLaSuw", "https://036za50svd.ufs.sh/f/YfSInbXC1crajf5oG8wShbtexNuPmdJ1C4oHOZ3irLFcXkwq", "https://036za50svd.ufs.sh/f/YfSInbXC1craPI3FdcTjxILsMWZuaiXSwfOKnkA9QPBryTYo"],
+      eventTypeBadge: (
+        <Badge
+          variant="default"
+          className=" bg-[#96bf59] text-lg max-sm:text-base text-white rounded-2xl "
+        >
+          <LucideFileChartColumnIncreasing className="h-4 w-4" />
+          Speaker Session
+        </Badge>
+      ),
+      InfoBadge: (
+        <Badge
+          variant="default"
+          className=" bg-[#F3F4BB] text-lg max-sm:text-base text-black rounded-2xl "
+        >
+          <IconRun className="h-4 w-4" />4 Speakers
+        </Badge>
+      ),
+    
+  },
+  {
+    
+      description: `Enactus Thapar hosted Founders Nexus, a speaker session where successful founders shared their journeys, inspiring students to embrace entrepreneurship and transform ideas into ventures.`,
+      src: "https://036za50svd.ufs.sh/f/YfSInbXC1craoqFdcuyEPvVd6C9cgj1akOW07lBw82zFhUIe",
+
+      numbers: {
+        "Students Participated": 250,
+        "Experts and Mentors": 10,
+        "Innovative Solutions": 20,
+        "Participating Teams": 39,
+      },
+      colors: {
+        primary: "#FFC220",
+        secondary: "#6E6546",
+      },
+      gallery: ["https://036za50svd.ufs.sh/f/YfSInbXC1craZpkyqMByLspMeEURVoQT2KBmC7n3vFhIzOJ6", "https://036za50svd.ufs.sh/f/YfSInbXC1craLmcc3eAasymAnFetuk7X2SOh8WVYMD9Rb5Hj", "https://036za50svd.ufs.sh/f/YfSInbXC1craCtWCssaoPUgYFIEdh5u8zqH0nK2vxWNQfcA9", "https://036za50svd.ufs.sh/f/YfSInbXC1crafvPXy9j0SRV6KNTqaUeop2EnciuOtdMxjgJ1", "https://036za50svd.ufs.sh/f/YfSInbXC1craXxgZWunnT9aFDvBh5mpjV1SkxzgXKsGiAR7C"],
+      sdg: ["https://036za50svd.ufs.sh/f/YfSInbXC1craxmMmc6sOeNFI9nTjri4cEk1y8UKdBJgLaSuw", "https://036za50svd.ufs.sh/f/YfSInbXC1crajf5oG8wShbtexNuPmdJ1C4oHOZ3irLFcXkwq", "https://036za50svd.ufs.sh/f/YfSInbXC1craPI3FdcTjxILsMWZuaiXSwfOKnkA9QPBryTYo"],
+      eventTypeBadge: (
+        <Badge
+          variant="default"
+          className=" bg-[#96bf59] text-lg max-sm:text-base text-white rounded-2xl "
+        >
+          <LucideFileChartColumnIncreasing className="h-4 w-4" />
+          Startup Accelerator
+        </Badge>
+      ),
+      InfoBadge: (
+        <Badge
+          variant="default"
+          className=" bg-[#F3F4BB] text-lg max-sm:text-base text-black rounded-2xl "
+        >
+          <IconRun className="h-4 w-4" />4 Rounds
+        </Badge>
+      ),
+    
+  },
 
 
 ],

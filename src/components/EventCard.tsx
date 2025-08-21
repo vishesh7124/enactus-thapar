@@ -132,13 +132,19 @@ export function EventCard({ card }) {
                     {/* {typeof active.content === "function"
                       ? active.content()
                       : active.content} */}
+                    {card.rounds && 
+                    <>
+                    
                     <p
                       style={{ color: card.colors.secondary }}
                       className={`text-3xl text-[${card.colors.secondary}] font-seriguel font-bold p-4 `}
                     >
                       ROUNDS
                     </p>
+                    
                     <RoundTimeline colors={card.colors} data={card.rounds} />
+                    </>
+                    }
 
                     <div className="w-full flex  justify-center items-center gap-12 max-sm:gap-8 my-10 max-[850px]:flex-col-reverse ">
                       <div className="relative overflow-visible h-[40rem] max-sm:h-[26rem] w-[65%] max-[850px]:w-full">
