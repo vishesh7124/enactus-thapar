@@ -10,12 +10,12 @@ const UnitEconomics = ({chartData}:UnitEconomicsProps) => {
       <DonutChart chartData={chartData} />
       <div className="flex flex-col justify-center items-center gap-0">
         <p
-          className={`text-6xl text-[#FFC221]  font-seriguel text-uppercase font-bold `}
+          className={`text-6xl max-sm:text-4xl text-[#FFC221]  font-seriguel text-uppercase font-bold `}
         >
           UNIT{" "}
         </p>
         <p
-          className={`text-6xl text-white font-seriguel text-uppercase font-bold  `}
+          className={`text-6xl max-sm:text-4xl text-white font-seriguel text-uppercase font-bold  `}
         >
           ECONOMICS{" "}
         </p>

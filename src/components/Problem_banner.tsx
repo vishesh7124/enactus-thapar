@@ -16,7 +16,7 @@ const Problem_banner = ({problems}:ProblemProps) => {
   return (
     <Banner title="PROBLEM">
       {problems.map((problem,index)=>(
-      <div className="flex items-center  justify-start gap-4">
+      <div className="flex items-center  justify-start gap-4 max-sm:flex-col">
         <img src={images[index]} alt="ps1" className="max-h-[100px] max-w-[100px]" />
         <p className="text-white">{problem}</p>
       </div>
