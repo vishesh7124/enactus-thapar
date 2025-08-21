@@ -1,11 +1,19 @@
 import Solution_banner from "@/components/Solution_Banner";
 import aatrangiBanner from "../assets/atrangi_banner.png";
+import aarohanBanner from "../assets/Aarohan_banner.png";
 import Problem_banner from "@/components/Problem_banner";
 import BusinessModel from "@/components/BuisnessModel";
 import Impact from "@/components/Impact";
 import UnitEconomics from "@/components/UnitEconomics";
 import { useParams } from "react-router";
-import sdg1 from "@/assets/sdg1.png";
+import sdg1 from "@/assets/sdg/1.svg";
+import sdg5 from "@/assets/sdg/5.svg";
+import sdg8 from "@/assets/sdg/8.svg";
+import sdg9 from "@/assets/sdg/9.svg";
+import sdg11 from "@/assets/sdg/11.svg";
+import sdg12 from "@/assets/sdg/12.svg";
+import sdg13 from "@/assets/sdg/13.svg";
+import sdg14 from "@/assets/sdg/14.svg";
 import bgImage from "@/assets/bgImage.webp"
 import bag from "../assets/bag1.png"
 
@@ -55,7 +63,7 @@ const projectData = {
     ],
 impact:[
     {
-      sdg:sdg1,
+      sdg:sdg8,
       bgImage:bgImage,
       color:"#a21caf",
       title:"Good Jobs and Economic Growth",
@@ -69,26 +77,26 @@ impact:[
       desc:"Supporting traditional communities by providing consistent income through craft and textile upcycling."
     },
     {
-      sdg:sdg1,
+      sdg:sdg5,
       bgImage:bgImage,
       color:"#d946ef",
       title:"Gender Equality",
       desc:"Empowering women artisans by recognizing and sustaining their traditional embroidery and textile skills."
     },
     {
-      sdg:sdg1,
+      sdg:sdg9,
       bgImage:bgImage,
       color:"#f97316",
       title:"Innovation and Infrastructure",
       desc:"Promoting innovation through circular economy models and sustainable infrastructure in fashion."
     }
   ]
-
   },
+
   aarohan: {
   name: "Aarohan",
   description: "Project Aarohan converts plastic waste into high quality eco-friendly 3D printer filament, offering industries a sustainable alternative while giving plastic a renewed purpose.",
-  banner: aatrangiBanner,
+  banner: aarohanBanner,
   problems: [
     "Thousands of plastic bottles are discarded after single use despite being recyclable.",
     "3D printing industry relies on expensive and unsustainable filament made from new plastic.",
@@ -131,32 +139,39 @@ impact:[
   ],
   impact: [
     {
-      sdg: sdg1,
+      sdg: sdg9,
       bgImage: bgImage,
       color: "#f26a2e",
       title: "Industry, Innovation and Infrastructure",
       desc: "Promotes sustainable 3D printing innovation by converting plastic waste into eco-friendly filament."
     },
     {
-      sdg: sdg1,
+      sdg: sdg11,
       bgImage: bgImage,
       color: "#f9c32d",
       title: "Sustainable Cities and Communities",
       desc: "Diverts plastic waste from landfills and builds sustainable practices across cities and institutions."
     },
     {
-      sdg: sdg1,
+      sdg: sdg12,
       bgImage: bgImage,
       color: "#bb9534",
       title: "Responsible Consumption and Production",
       desc: "Provides a circular economy solution by reusing plastic bottles into productive materials."
     },
     {
-      sdg: sdg1,
+      sdg: sdg13,
       bgImage: bgImage,
       color: "#3fa14c",
       title: "Climate Action",
       desc: "Reduces CO2 emissions by recycling plastic, cutting reliance on virgin plastic production."
+    },
+    {
+    sdg: sdg14,
+    bgImage: bgImage,
+    color: "#1f97d4",
+    title: "Life Below Water",
+    desc: "Prevents plastic waste from polluting oceans, protecting marine ecosystems and biodiversity."
     }
   ]
 }
