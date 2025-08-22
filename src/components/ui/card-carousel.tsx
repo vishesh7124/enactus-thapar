@@ -1,11 +1,13 @@
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-
+//@ts-expect-error ignore
 import "swiper/css"
+//@ts-expect-error ignore
 import "swiper/css/effect-coverflow"
+//@ts-expect-error ignore
 import "swiper/css/pagination"
+//@ts-expect-error ignore
 import "swiper/css/navigation"
-import { SparklesIcon } from "lucide-react"
 import {
   Autoplay,
   EffectCoverflow,
@@ -13,7 +15,6 @@ import {
   Pagination,
 } from "swiper/modules"
 
-import { Badge } from "@/components/ui/badge"
 
 import useMediaQuery from "@/hooks/useMediaQuery";
 
@@ -24,7 +25,7 @@ interface CarouselProps {
   autoplayDelay?: number
   showPagination?: boolean
   showNavigation?: boolean
-  children:any
+  children:React.ReactNode[]
 }
 
 export const CardCarousel: React.FC<CarouselProps> = ({
@@ -113,7 +114,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                 initialSlide={1}
                 modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
               >
-                {children.map((comp:any, index:number) => (
+                {children.map((comp, index:number) => (
                   <SwiperSlide key={index}>
                     <div className="w-full flex justify-center items-center  rounded-3xl max-sm:w-44  overflow-hidden">
                       {/* <img

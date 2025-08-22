@@ -1,6 +1,11 @@
 import { motion } from "motion/react";
 
-export default function BusinessModel({businessItems}:{businessItems:object}) {
+type bModeltype = {
+  img: string;
+  text: string;
+};
+
+export default function BusinessModel({businessItems}:{businessItems:bModeltype[]}) {
 
 
   return (
@@ -73,7 +78,7 @@ export default function BusinessModel({businessItems}:{businessItems:object}) {
               <div className="w-16 h-16 flex items-center justify-center">
                 <img
                   src={item.img}
-                  alt={`business-${item.id}`}
+                  alt={`business-${index}`}
                   className="object-contain w-full h-full"
                 />
               </div>

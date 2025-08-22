@@ -6,14 +6,12 @@ import {
   motion,
 } from "motion/react";
 import  { useEffect, useRef, useState } from "react";
+import { eventType2 } from "@/types/eventTypes";
 
-interface TimelineEntry {
-  card:object
-}
 
 import { EventCard } from "../EventCard";
 
-export const Timeline = ({ item, align, title }: { item: object, align:"left" | "right", title:string }) => {
+export const Timeline = ({ item, align, title }: { item: eventType2, align:"left" | "right", title:string }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);

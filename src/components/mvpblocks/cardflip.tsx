@@ -11,17 +11,15 @@
  */
 
 import { cn } from '@/lib/utils';
-import { url } from 'inspector';
-import { ArrowRight, Code2, Copy, Rocket, Zap } from 'lucide-react';
 import { useState } from 'react';
 
 export interface CardFlipProps {
   title: string;
-  sdg:any,
+  sdg:string,
   bgImage?: string;
   // backCardContent:string, 
   color:string
-  children:any
+  children:string;
 }
 
 // interface BackOfCardProps {
@@ -30,7 +28,7 @@ export interface CardFlipProps {
 //   children?:any
 // }
 
-function BackOfCard({color, children, title}:{color:string, children:string, title:any}){
+function BackOfCard({color, children, title}:{color:string, children:string, title:string}){
   return (
     <>
     <div className="border-[5px] border-color-white w-full h-full min-h-fit rounded-[10px] flex flex-col justify-start items-start gap-3.5 p-4 max-sm:p-2" style={{backgroundColor:color}}>
@@ -271,7 +269,7 @@ export default function CardFlip({
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes slideIn {
           0% {
             transform: translateX(-100px);

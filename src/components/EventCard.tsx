@@ -1,22 +1,23 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { AnimatePresence, color, motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import PinnedPaper from "./PinnedPaper";
-import { Badge } from "@/components/ui/badge";
-import { LucideFileChartColumnIncreasing } from "lucide-react";
-import { IconRun } from "@tabler/icons-react";
 import { RoundTimeline } from "./RoundTimeline";
 import { Marquee } from "./magicui/marquee";
 import { PixelImage } from "./magicui/pixel-image";
 import { cn } from "@/lib/utils";
 import { OrbitingCircles } from "./magicui/orbiting-circles";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { eventType2 } from "@/types/eventTypes";
 
+interface EventCardProps {
+  card: eventType2
+}
 
-export function EventCard({ card }) {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
+export function EventCard({ card }:EventCardProps) {
+  const [active, setActive] = useState<(typeof card) | boolean | null>(
     null
   );
   const id = useId();
@@ -60,7 +61,7 @@ export function EventCard({ card }) {
         {active && typeof active === "object" ? (
           <div className="fixed inset-0  grid place-items-center  z-[100]">
             <motion.button
-              key={`button-${active.title}-${id}`}
+              key={`button-${active}-${id}`}
               layout
               initial={{
                 opacity: 0,
@@ -80,16 +81,16 @@ export function EventCard({ card }) {
               <CloseIcon />
             </motion.button>
             <motion.div
-              layoutId={`card-${active.title}-${id}`}
+              layoutId={`card-${active}-${id}`}
               ref={ref}
               className=" w-full md:w-10/12   h-full md:h-fit md:max-h-[90%] md:mt-12  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-x-hidden overflow-y-scroll"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div layoutId={`image-${active}-${id}`}>
                 <img
                   width={200}
                   height={200}
                   src={active.src}
-                  alt={active.title}
+                  alt={"img"}
                   className="w-72 max-[380px]:w-64  sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top m-12"
                 />
                 <Marquee pauseOnHover className="[--duration:20s] ">
@@ -234,13 +235,13 @@ export function EventCard({ card }) {
       </AnimatePresence>
       <div className="max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-1 items-start gap-4">
         <motion.div
-          layoutId={`card-${card.title}-${id}`}
-          key={card.title}
+          layoutId={`card-${card}-${id}`}
+          key={id}
           onClick={() => setActive(card)}
           className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 bg-[#30303074]  rounded-xl cursor-pointer"
         >
           <div className="flex gap-12 flex-col  w-full">
-            <motion.div layoutId={`image-${card.title}-${id}`}>
+            <motion.div layoutId={`image-${card}-${id}`}>
               <div className="flex justify-center items-center text-[#F3F4BB]">
                 <img src={card.src} className="object-contain w-80 " alt="" />
               </div>

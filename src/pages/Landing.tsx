@@ -15,9 +15,7 @@ import Partners from "@/components/Partners";
 import { LandingEvent } from "@/components/LandingEvent";
 import { eventType1 } from "@/types/eventTypes";
 
-const assets ={
-  atrangi:["https://036za50svd.ufs.sh/f/YfSInbXC1craBQ52tGxOXUp5FuvbP9OA3tCryjcldmYn6ez2","https://036za50svd.ufs.sh/f/YfSInbXC1craBQ52tGxOXUp5FuvbP9OA3tCryjcldmYn6ez2"]
-}
+
 
   const events:eventType1[] = [
     {

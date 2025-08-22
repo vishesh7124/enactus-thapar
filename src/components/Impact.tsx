@@ -2,9 +2,17 @@ import { CardCarousel } from "@/components/ui/card-carousel"
 import CardFlip from "@/components/mvpblocks/cardflip";
 import { motion } from "motion/react";
 
+type impactType = {
+        sdg:string,
+      bgImage:string,
+      color:string,
+      title:string,
+      desc:string
+}
 
 
-const Impact = ({impactData}:{impactData:object}) => {
+
+const Impact = ({impactData}:{impactData:impactType[]}) => {
   return (
         <div className="space-y-8 px-6 w-full max-w-7xl">
       {/* Heading */}

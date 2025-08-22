@@ -9,7 +9,6 @@ import { cn, chunkObjectValues } from "@/lib/utils";
 import bonkers from "@/assets/bonkers.png";
 import manipal from "@/assets/manipal.png";
 import niine from "@/assets/niine.png";
-import atrangi from "../assets/atrangi.png";
 
 const partners = {
   manipal: manipal,

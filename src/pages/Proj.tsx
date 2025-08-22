@@ -10,6 +10,8 @@ import bag from "../assets/bag1.png"
 
 
 
+
+
 const projectData = {
   atrangi:{
     name: "Atrangi",

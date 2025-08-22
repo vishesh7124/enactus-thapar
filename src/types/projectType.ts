@@ -16,4 +16,12 @@ export type ProjectType2 = {
     img2: string,
 }
 
+export type impactType = {
+        sdg:string,
+      bgImage:string,
+      color:string,
+      title:string,
+      desc:string
+}
+
 export type projectsType = ProjectType[]
