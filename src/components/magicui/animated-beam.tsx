@@ -94,9 +94,9 @@ gradientStopColor = "#ff6b35",  // Warm orange-red for a complementary finish
     // Initialize ResizeObserver
     const resizeObserver = new ResizeObserver((entries) => {
       // For all entries, recalculate the path
-      for (let entry of entries) {
+      entries.forEach(() => {
         updatePath();
-      }
+      });
     });
 
     // Observe the container element

@@ -18,7 +18,7 @@ interface PinnedPaperProps {
 const PinnedPaper: React.FC<PinnedPaperProps> = ({ 
   children, 
   rotation = 'rotate-2', 
-  paperColor = 'bg-green-500',
+  // paperColor = 'bg-green-500',
   className = '',
 
 }) => {

@@ -1,7 +1,10 @@
 import DonutChart from "./DonutChart";
 
+ type ChartDataType ={ browser: string, visitors: number, fill: string }
+
+
 interface UnitEconomicsProps{
-  chartData:object
+  chartData:ChartDataType[]
 }
 
 const UnitEconomics = ({chartData}:UnitEconomicsProps) => {

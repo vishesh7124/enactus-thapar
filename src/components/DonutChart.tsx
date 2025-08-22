@@ -1,17 +1,13 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
-import { Label, Pie, PieChart, Sector } from "recharts"
+import {  } from "lucide-react"
+import {  Pie, PieChart, Sector } from "recharts"
 import { PieSectorDataItem } from "recharts/types/polar/Pie"
 import useMediaQuery from "@/hooks/useMediaQuery"
 
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import {
   ChartConfig,
@@ -21,6 +17,9 @@ import {
 } from "@/components/ui/chart"
 
 export const description = "A donut chart with an active sector"
+
+
+ type ChartDataType ={ browser: string, visitors: number, fill: string }
 
 
 
@@ -51,7 +50,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 
-const ChartPieDonutActive = ({chartData}:{chartData:object}) => {
+const ChartPieDonutActive = ({chartData}:{chartData:ChartDataType[]}) => {
   const isMobile = useMediaQuery("(max-width:480px)")
   return (
     <Card className="flex flex-col border-0 ">

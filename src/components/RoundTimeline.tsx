@@ -34,7 +34,8 @@ export const RoundTimeline = ({ data, colors }: { data: string[], colors:{primar
 
         {/* Timeline Nodes */}
         <div className="flex justify-between items-center relative w-9/12">
-          {data.map((item, index) => (
+{        //@ts-expect-error errorexpected
+}          {data.map((item, index) => (
             <motion.div
               key={index}
               className="flex flex-col items-center"
