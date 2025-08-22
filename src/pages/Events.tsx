@@ -95,7 +95,12 @@ const eventData = {
     
       description: `Synergy Spark, a flagship event of AARAMBH at Thapar University, was a collaborative innovation challenge where students developed products and services for companies chosen through an auction. The event fostered creativity and practical problem-solving, encouraging disruptive ideas to tackle real-world challenges.`,
       src: "https://036za50svd.ufs.sh/f/YfSInbXC1crawqaHFVEhXGcFDjwE8f6qzIv23xnoKmYtBUsS",
-      
+      rounds:[
+        "Pass Through Hoop",
+        "Snatch the chain",
+        "Strategy Showdown",
+        "The Fireball"
+      ],
       numbers: {
         "Students Participated": 250,
         "Experts and Mentors": 10,

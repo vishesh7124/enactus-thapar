@@ -55,7 +55,7 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <NavLink
                 key={index}
-                to={item!=="Home"?`/${item.replace(/\s+/g, "").toLowerCase()}`:"/"}
+                to={item!=="Home"?`/${item.replace(/\s+/g, "").toLowerCase()}${item==="Events"? "/aarambh":""}`:"/"}
                 className={({ isActive }) =>
                     isActive ? "text-[#FFC221]" : "text-white hover:text-[#FFC221] "
                   }              >
@@ -85,7 +85,7 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <NavLink
                 key={index}
-                to={item!=="Home"?`/${item.replace(/\s+/g, "").toLowerCase()}`:"/"}
+                to={item!=="Home"?`/${item.replace(/\s+/g, "").toLowerCase()}${item==="Events"? "/aarambh":""}`:"/"}
                 className={({ isActive }) =>
                     isActive ? "text-[#FFC221]" : "text-white hover:text-[#FFC221] "
                   }                  >

@@ -153,6 +153,7 @@ const Landing = () => {
             maskImage:
               "linear-gradient(to top, transparent 0%, black 12.5%, black 87.5%, transparent 100%)",
           }}
+          id="events"
         >
           {/* <EventC /> */}
           {/* <Partners/> */}
