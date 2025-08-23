@@ -1,9 +1,16 @@
 import { motion } from "motion/react";
+import img1 from "@/assets/1.png";
+import img2 from "@/assets/2.png";
+import img3 from "@/assets/3.png";
+import img4 from "@/assets/4.png";
+
+const images = [img1, img2, img3, img4];
 
 type bModeltype = {
   img: string;
   text: string;
 };
+
 
 export default function BusinessModel({businessItems}:{businessItems:bModeltype[]}) {
 
@@ -77,7 +84,7 @@ export default function BusinessModel({businessItems}:{businessItems:bModeltype[
             <div className="h-16 flex items-center justify-center p-4 ">
               <div className="w-16 h-16 flex items-center justify-center">
                 <img
-                  src={item.img}
+                  src={images[index % images.length]}
                   alt={`business-${index}`}
                   className="object-contain w-full h-full"
                 />
