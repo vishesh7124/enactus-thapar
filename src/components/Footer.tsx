@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h1>Resources</h1>
             <div className="flex flex-col text-sm gap-0.5  ">
-              {["Home", "About Us", "Team", "Blogs"].map((item, index) => (
+              {["Home", "Projects", "Team"].map((item, index) => (
                 <Link
                   className="hover:text-white text-[#A29D8D] "
                   key={index}
@@ -33,7 +33,7 @@ const Footer = () => {
                   <Link
                     className="hover:text-white text-[#A29D8D] "
                     key={index}
-                    to={"/"}
+                    to={"/events/aarambh"}
                   >
                     {item}
                   </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
                   key={index}
                   to={
                     item !== "Home"
-                      ? `/${item.replace(/\s+/g, "").toLowerCase()}`
+                      ? `/projects/${item.replace(/\s+/g, "").toLowerCase()}`
                       : "/"
                   }
                 >
@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-col gap-2 items-center justify-center">
         <div className=" flex gap-4 social">
-          <Link to={`/`}>
+          <Link to={`https://www.linkedin.com/company/enactus-tiet/posts/?feedView=all`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5rem"
@@ -94,7 +94,7 @@ const Footer = () => {
               />
             </svg>
           </Link>
-          <Link to={`/`}>
+          <Link to={`https://www.instagram.com/envision_thapar?igsh=ZzlocDVrZGFhMnNm`}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5rem"
@@ -124,7 +124,7 @@ const Footer = () => {
               />
             </svg>
           </Link>
-          <Link to={"/"}>
+          <Link to={"https://www.facebook.com/EnactusThapar/"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.5rem"
