@@ -95,7 +95,7 @@ const Navbar = () => {
             <button className=" w-20 relative inline-flex h-12 overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#000_0%,#604f23e7_50%,#fff_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#FFC221] px-3 py-1 text-sm font-medium text-zinc-950 backdrop-blur-3xl">
-                <NavLink to="/atrangi">Shop</NavLink>
+                <NavLink to="/">Shop</NavLink>
               </span>
             </button>
           </div>
