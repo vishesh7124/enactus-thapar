@@ -160,7 +160,7 @@ const Team = () => {
           </div>
         </div>
         <Marquee pauseOnHover  className="[--duration:20s]">
-          {Core.map((member, index) => (
+          {Core.slice(0,7).map((member, index) => (
             <figure
               key={index}
               className={cn(
@@ -177,7 +177,7 @@ const Team = () => {
           ))}
         </Marquee>
         <Marquee pauseOnHover reverse  className="[--duration:20s]">
-          {Core.map((member, index) => (
+          {Core.slice(7,16).map((member, index) => (
             <figure
               key={index}
               className={cn(
