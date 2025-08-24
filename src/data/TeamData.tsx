@@ -4,7 +4,7 @@ import l2 from "@/assets/gagandeep2.jpg"
 
 export const Faculty: ProfileType[] = [
     {
-        name:"Gagandeep Kaur",
+        name:"Dr. Gagandeep Kaur",
         position: " Faculty President",
         img:l2,
         bgLayer:l1,
