@@ -41,13 +41,12 @@ const Team = () => {
             </svg>
           </div>
           <p className="mt-6 max-sm:text-sm ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
+          At Enactus Thapar, we are a passionate student-led organization at
+          Thapar Institute of Engineering and Technology, Patiala, committed to
+          using the power of entrepreneurship to create positive social and
+          environmental change. Our dynamic team works on real-world challenges
+          through innovative, scalable solutions, focusing on the intersection
+          of sustainability, social impact, and engineering.
           </p>
         </div>
         <div className="h-80  max-sm:h-64   ">
